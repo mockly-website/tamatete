@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contatta Ta Matete – Ristorante Bistrot a Oristano. Prenota un tavolo, chiamaci o trovaci su WhatsApp. Piazza Giovanni Corrias 2/A.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Contatti e Prenotazioni – Ta Matete | Oristano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contatti">
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-ring"></div>
+      <span class="preloader-text">Ta Matete</span>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Ta Matete – Home">
+        <img src="img/logo.png" alt="Ta Matete" class="nav-logo-img">
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html#about" role="menuitem" data-i18n="nav.about">Chi siamo</a></li>
+        <li role="none"><a href="menu.html" role="menuitem" data-i18n="nav.menu">Menu</a></li>
+        <li role="none"><a href="index.html#gallery" role="menuitem" data-i18n="nav.gallery">Galleria</a></li>
+        <li role="none"><a href="contatti.html" role="menuitem" class="active-page" data-i18n="nav.contact">Contatti</a></li>
+        <li role="none"><a href="contatti.html#reservation" class="nav-cta" role="menuitem" data-i18n="nav.reserve">Prenota</a></li>
+      </ul>
+
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section reveal" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact.tag">Contatti e Prenotazioni</span>
+          <h2 class="section-title" data-i18n="contact.title">Trova <span class="text-accent">Ta Matete</span></h2>
+          <p class="section-desc" data-i18n="contact.desc">Siamo nel centro storico di Oristano, nella stessa piazza del Museo Antiquarium Arborense.</p>
+        </div>
+        <div class="contatti-grid">
+          <div class="contatti-form" id="reservation">
+            <div class="contatti-form-header">
+              <h3 data-i18n="reserve.title">Prenota il tuo <span class="text-accent">tavolo</span></h3>
+              <p data-i18n="reserve.desc">Contattaci direttamente su WhatsApp o telefona per assicurarti un posto nella nostra sala o nel cortile.</p>
+            </div>
+            <form class="reservation-form" id="reservationForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formName" data-i18n="reserve.form.name">Nome</label>
+                  <input type="text" id="formName" name="name" data-i18n-placeholder="reserve.form.name_ph" placeholder="Il tuo nome" required>
+                </div>
+                <div class="form-group">
+                  <label for="formPhone" data-i18n="reserve.form.phone">Telefono</label>
+                  <input type="tel" id="formPhone" name="phone" data-i18n-placeholder="reserve.form.phone_ph" placeholder="+39 3XX XXX XXXX" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="formDate" data-i18n="reserve.form.date">Data</label>
+                  <input type="date" id="formDate" name="date" required>
+                </div>
+                <div class="form-group">
+                  <label for="formTime" data-i18n="reserve.form.time">Ora</label>
+                  <input type="time" id="formTime" name="time" required>
+                </div>
+                <div class="form-group form-group-sm">
+                  <label for="formGuests" data-i18n="reserve.form.guests">Coperti</label>
+                  <input type="number" id="formGuests" name="guests" min="1" max="20" value="2" required>
+                </div>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="formNotes" data-i18n="reserve.form.notes">Note (opzionale)</label>
+                <textarea id="formNotes" name="notes" rows="2" data-i18n-placeholder="reserve.form.notes_ph" placeholder="Allergie, richieste speciali…"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="fas fa-paper-plane" aria-hidden="true"></i> <span data-i18n="reserve.form.submit">Richiedi prenotazione</span>
+              </button>
+              <p class="form-disclaimer" data-i18n="reserve.form.disclaimer">
+                Oppure scrivici su <a href="https://wa.me/393477490289" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a> o chiama il <a href="tel:+393477490289"><i class="fas fa-phone"></i> +39 347 749 0289</a>
+              </p>
+            </form>
+          </div>
+          <div class="contatti-info">
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4 data-i18n="contact.address_title">Indirizzo</h4>
+                <p>Piazza Giovanni Corrias 2/A, 09170 Oristano</p>
+                <a href="https://maps.google.com/?q=Ta+Matete+Oristano" target="_blank" rel="noopener" class="contact-link" data-i18n="contact.address_link">Apri in Maps →</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4 data-i18n="contact.phone_title">Telefono / WhatsApp</h4>
+                <a href="tel:+393477490289" class="contact-link-large">+39 347 749 0289</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4 data-i18n="contact.email_title">Email</h4>
+                <a href="mailto:infotamatete@gmail.com" class="contact-link-large">infotamatete@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4 data-i18n="contact.hours_title">Orari di apertura</h4>
+                <div class="contact-hours">
+                  <span><i class="fas fa-sun" aria-hidden="true"></i> <span data-i18n="contact.hours_lunch">Pranzo: 12:00 – 15:00</span></span>
+                  <span><i class="fas fa-moon" aria-hidden="true"></i> <span data-i18n="contact.hours_dinner">Cena: 19:00 – 23:00</span></span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <span class="contact-social-label" data-i18n="contact.social_label">Seguici su</span>
+              <div class="contact-social-links">
+                <a href="https://www.instagram.com/ta_matete/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/TaMateteOristano" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+            <div class="contact-map-wrap">
+              <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1225.123456789!2d8.5925!3d39.9036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU0JzEzLjAiTiA4wrAzNSczMy4wIkU!5e0!3m2!1sit!2sit!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Mappa Ta Matete Oristano"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Ta Matete</h3>
+          <p data-i18n="footer.brand_subtitle">Ristorante Bistrot – Oristano</p>
+          <p class="footer-location">Piazza Giovanni Corrias 2/A</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1_title">Menu</h4>
+          <nav>
+            <a href="index.html#about" data-i18n="nav.about">Chi siamo</a>
+            <a href="menu.html" data-i18n="nav.menu">Menu</a>
+            <a href="index.html#gallery" data-i18n="nav.gallery">Galleria</a>
+            <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2_title">Contatti</h4>
+          <a href="tel:+393477490289">+39 347 749 0289</a>
+          <a href="mailto:infotamatete@gmail.com">infotamatete@gmail.com</a>
+          <a href="https://wa.me/393477490289" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3_title">Social</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ta_matete/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TaMateteOristano" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informazioni</h4>
+          <a href="cookie.html" rel="nofollow" data-i18n="footer.cookie">Cookie Policy</a>
+          <a href="privacy.html" rel="nofollow" data-i18n="footer.privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="footer.copyright">&copy; 2026 Ta Matete – Ristorante Bistrot. Tutti i diritti riservati.</p>
+        <p class="footer-credit" data-i18n="footer.credit">Realizzato da <a href="https://mockly.it" target="_blank" rel="noopener">Mockly</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Torna su">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

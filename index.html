@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ta Matete – Ristorante Bistrot nel cuore di Oristano. Cucina mediterranea, specialità di pesce e tradizione sarda in Piazza Giovanni Corrias.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Ta Matete – Ristorante Bistrot | Oristano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-ring"></div>
+      <span class="preloader-text">Ta Matete</span>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Ta Matete – Home">
+        <img src="img/logo.png" alt="Ta Matete" class="nav-logo-img">
+      </a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#about" role="menuitem" data-i18n="nav.about">Chi siamo</a></li>
+        <li role="none"><a href="menu.html" role="menuitem" data-i18n="nav.menu">Menu</a></li>
+        <li role="none"><a href="#gallery" role="menuitem" data-i18n="nav.gallery">Galleria</a></li>
+        <li role="none"><a href="contatti.html" role="menuitem" data-i18n="nav.contact">Contatti</a></li>
+        <li role="none"><a href="contatti.html#reservation" class="nav-cta" role="menuitem" data-i18n="nav.reserve">Prenota</a></li>
+      </ul>
+
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="it" aria-label="Italiano">IT</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge-wrapper">
+        <span class="hero-badge" data-i18n="hero.badge">Ristorante Bistrot</span>
+      </div>
+      <h1 class="hero-logo-wrapper">
+        <img src="img/logo-senza-sfondo.png" alt="Ta Matete" class="hero-logo">
+      </h1>
+      <p class="hero-sub" data-i18n="hero.sub">Nel cuore storico di Oristano, tradizione e innovazione si incontrano.</p>
+      <div class="hero-actions">
+        <a href="contatti.html#reservation" class="btn btn-primary">
+          <i class="fas fa-calendar-check" aria-hidden="true"></i> <span data-i18n="hero.btn1">Prenota un tavolo</span>
+        </a>
+        <a href="menu.html" class="btn btn-outline">
+          <i class="fas fa-utensils" aria-hidden="true"></i> <span data-i18n="hero.btn2">Scopri il menu</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span data-i18n="hero.scroll">Scopri</span>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-tag" data-i18n="about.tag">La nostra storia</span>
+            <h2 class="section-title" data-i18n="about.title">Benvenuti da <span class="text-accent">Ta Matete</span></h2>
+            <div class="about-body">
+              <p data-i18n="about.p1">Ta Matete nasce nel cuore di Oristano, nell'elegante <strong>Piazza Giovanni Corrias</strong>, la stessa che ospita il Museo Antiquarium Arborense. Un luogo dove la tradizione culinaria sarda e mediterranea si fonde con influenze internazionali per offrire un'esperienza unica.</p>
+              <p data-i18n="about.p2">A guidare il locale è <strong>Paolo</strong>, la cui passione per l'accoglienza e la cucina di qualità si riflette in ogni piatto e in ogni dettaglio del servizio. L'atmosfera raccolta della sala interna si alterna alla suggestione del cortile esterno e dei tavoli in piazza, illuminati la sera per una cena all'insegna della convivialità.</p>
+            </div>
+            <div class="about-features">
+              <div class="about-feature"><span class="about-feature-icon"><i class="fas fa-fish"></i></span><span data-i18n="about.f1">Cucina mediterranea e specialità di pesce</span></div>
+              <div class="about-feature"><span class="about-feature-icon"><i class="fas fa-leaf"></i></span><span data-i18n="about.f2">Opzioni vegetariane e senza glutine</span></div>
+              <div class="about-feature"><span class="about-feature-icon"><i class="fas fa-wine-glass-alt"></i></span><span data-i18n="about.f3">Selezione di vini locali e birre artigianali</span></div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="about-image-wrap">
+              <div class="about-image-main">
+                <img src="img/luogo.jpg" alt="Ta Matete" loading="lazy">
+              </div>
+              <div class="about-image-accent"></div>
+            </div>
+            <div class="about-badge-card">
+              <i class="fas fa-map-pin"></i>
+              <div>
+                <strong>Piazza Giovanni Corrias 2/A</strong>
+                <span data-i18n="about.badge">Centro storico, Oristano</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-stats reveal" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number" data-target="4.6">0</span>
+            <span class="stat-label" data-i18n="stats.rating">Rating medio</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="500">0</span>
+            <span class="stat-label" data-i18n="stats.reviews">Recensioni</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2015">0</span>
+            <span class="stat-label" data-i18n="stats.year">Anno di apertura</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="gallery.tag">Galleria</span>
+          <h2 class="section-title" data-i18n="gallery.title">Scatti dal <span class="text-accent">Ristorante</span></h2>
+          <p class="section-desc" data-i18n="gallery.desc">Piatti, atmosfere e momenti conviviali da Ta Matete.</p>
+        </div>
+      </div>
+      <div class="gallery-carousel">
+        <button class="gallery-arrow gallery-arrow-prev" id="galleryPrev" aria-label="Precedenti">&#8249;</button>
+        <div class="gallery-track-wrap">
+          <div class="gallery-track" id="galleryTrack">
+            <div class="gallery-slide"><img src="img/1.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/2.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/3.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/4.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/5.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/6.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/7.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/8.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/9.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/10.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/11.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/12.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/13.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/14.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/15.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/16.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/17.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/18.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/19.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/20.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/21.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/22.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/23.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/24.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/25.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/26.jpg" alt="" loading="lazy"></div>
+            <div class="gallery-slide"><img src="img/27.jpg" alt="" loading="lazy"></div>
+          </div>
+        </div>
+        <button class="gallery-arrow gallery-arrow-next" id="galleryNext" aria-label="Successive">&#8250;</button>
+      </div>
+      <div class="gallery-dots" id="galleryDots"></div>
+      <div class="gallery-all-link">
+        <button id="galleryAllBtn" class="btn btn-outline"><i class="far fa-images"></i> Tutte le foto (27)</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Ta Matete</h3>
+          <p data-i18n="footer.brand_subtitle">Ristorante Bistrot – Oristano</p>
+          <p class="footer-location">Piazza Giovanni Corrias 2/A</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1_title">Menu</h4>
+          <nav>
+            <a href="#about" data-i18n="nav.about">Chi siamo</a>
+            <a href="menu.html" data-i18n="nav.menu">Menu</a>
+            <a href="#gallery" data-i18n="nav.gallery">Galleria</a>
+            <a href="contatti.html" data-i18n="nav.contact">Contatti</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2_title">Contatti</h4>
+          <a href="tel:+393477490289">+39 347 749 0289</a>
+          <a href="mailto:infotamatete@gmail.com">infotamatete@gmail.com</a>
+          <a href="https://wa.me/393477490289" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3_title">Social</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/ta_matete/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/TaMateteOristano" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.info_title">Informazioni</h4>
+          <a href="cookie.html" rel="nofollow" data-i18n="footer.cookie">Cookie Policy</a>
+          <a href="privacy.html" rel="nofollow" data-i18n="footer.privacy">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="footer.copyright">&copy; 2026 Ta Matete – Ristorante Bistrot. Tutti i diritti riservati.</p>
+        <p class="footer-credit" data-i18n="footer.credit">Realizzato da <a href="https://mockly.it" target="_blank" rel="noopener">Mockly</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Torna su">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Gallery lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8250;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg">
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
