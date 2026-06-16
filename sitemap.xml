@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tamatete.it/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://tamatete.it/menu.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://tamatete.it/contatti.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tamatete.it/cookie.html</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://tamatete.it/privacy.html</loc>
+    <priority>0.30</priority>
+  </url>
+</urlset>
