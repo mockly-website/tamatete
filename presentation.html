@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ta Matete — Presentazione Sito Web | Mockly</title>
+<title>Ta Matete — Proposta di Progetto Digitale | Mockly</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,6 @@
 :root{
   --gold:#9c922c;
   --gold-light:rgba(156,146,44,0.12);
-  --gold-glow:rgba(156,146,44,0.25);
   --green:#224839;
   --green-dark:#1a2e22;
   --dark:#1a1a1a;
@@ -19,10 +18,7 @@
   --text-light:#666;
   --bg-cream:#f5f4f0;
   --bg-warm:#f0ede6;
-  --card-shadow:0 4px 24px rgba(0,0,0,0.06);
-  --card-hover-shadow:0 12px 48px rgba(0,0,0,0.1);
   --radius:20px;
-  --radius-sm:12px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -35,25 +31,17 @@ body{
 }
 .container{max-width:1140px;margin:0 auto;padding:0 28px}
 
-/* ——— reveal animations ——— */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1)}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:0.1s}
-.reveal-delay-2{transition-delay:0.2s}
-.reveal-delay-3{transition-delay:0.3s}
-.reveal-delay-4{transition-delay:0.4s}
-.reveal-delay-5{transition-delay:0.5s}
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+.reveal-d4{transition-delay:0.4s}
+.reveal-d5{transition-delay:0.5s}
 
-/* ——— sections ——— */
-.section{
-  padding:100px 0;
-  position:relative
-}
+.section{padding:90px 0;position:relative}
 .section-alt{background:var(--bg-warm)}
-.section-header{
-  text-align:center;
-  margin-bottom:60px
-}
+.section-header{text-align:center;margin-bottom:52px}
 .section-label{
   display:inline-block;
   font-size:0.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;
@@ -64,83 +52,50 @@ body{
 }
 .section-title{
   font-family:Cabin,sans-serif;
-  font-size:clamp(1.8rem,4vw,2.6rem);
+  font-size:clamp(1.6rem,3.5vw,2.4rem);
   font-weight:600;
-  color:var(--dark);
-  position:relative
+  color:var(--dark)
 }
 .section-title::after{
-  content:'';
-  display:block;
-  width:40px;height:3px;
+  content:'';display:block;
+  width:36px;height:3px;
   background:var(--gold);
-  margin:16px auto 0;
+  margin:14px auto 0;
   border-radius:2px
 }
 .section-sub{
-  font-size:1.05rem;
-  color:var(--text-light);
-  margin-top:12px;
-  max-width:580px;
-  margin-left:auto;
-  margin-right:auto
+  font-size:1rem;color:var(--text-light);
+  margin-top:10px;max-width:560px;
+  margin-left:auto;margin-right:auto
 }
 
-/* ——— cover ——— */
+/* cover */
 #cover{
   min-height:100vh;
   display:flex;align-items:center;
   background:linear-gradient(160deg,var(--green-dark) 0%,var(--green) 45%,#2d5e4a 100%);
   color:#fff;
-  position:relative;
-  overflow:hidden
+  position:relative;overflow:hidden
 }
-#cover .bg-orb{
-  position:absolute;
-  border-radius:50%;
-  filter:blur(80px);
-  pointer-events:none
+#cover .orb{
+  position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none
 }
-#cover .bg-orb-1{
-  width:600px;height:600px;
-  background:rgba(156,146,44,0.08);
-  top:-200px;right:-100px;
-  animation:orbFloat 25s ease-in-out infinite alternate
-}
-#cover .bg-orb-2{
-  width:400px;height:400px;
-  background:rgba(255,255,255,0.03);
-  bottom:-150px;left:-100px;
-  animation:orbFloat 30s ease-in-out infinite alternate-reverse
-}
-#cover .bg-orb-3{
-  width:300px;height:300px;
-  background:rgba(156,146,44,0.05);
-  top:30%;left:60%;
-  animation:orbFloat 20s ease-in-out infinite alternate
-}
-@keyframes orbFloat{
+#cover .orb1{width:500px;height:500px;background:rgba(156,146,44,0.08);top:-150px;right:-80px;animation:drift 25s ease-in-out infinite alternate}
+#cover .orb2{width:350px;height:350px;background:rgba(255,255,255,0.03);bottom:-120px;left:-80px;animation:drift 30s ease-in-out infinite alternate-reverse}
+@keyframes drift{
   0%{transform:translate(0,0) scale(1)}
-  100%{transform:translate(40px,-30px) scale(1.15)}
+  100%{transform:translate(30px,-20px) scale(1.1)}
 }
-#cover .grid-lines{
+#cover .grid{
   position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
   background-size:60px 60px;
   pointer-events:none
 }
-.cover-content{
+.cover-inner{
   position:relative;z-index:1;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-  width:100%;
-  max-width:1140px;
-  margin:0 auto;
-  padding:0 28px
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+  width:100%;max-width:1140px;margin:0 auto;padding:0 28px
 }
 .cover-left .badge{
   display:inline-block;
@@ -149,583 +104,224 @@ body{
   border:1px solid rgba(156,146,44,0.3);
   background:rgba(0,0,0,0.2);
   padding:6px 20px;border-radius:100px;
-  margin-bottom:24px
-}
-.cover-left .logo-cover{
-  max-width:200px;
-  margin-bottom:28px;
-  filter:drop-shadow(0 4px 24px rgba(0,0,0,0.3))
-}
-.cover-left h1{
-  font-family:Cabin,sans-serif;
-  font-size:clamp(2.2rem,5vw,3.8rem);
-  font-weight:700;
-  line-height:1.1;
-  margin-bottom:8px;
-  letter-spacing:-0.5px
-}
-.cover-left .tagline{
-  font-size:clamp(0.85rem,1.3vw,1rem);
-  color:rgba(255,255,255,0.45);
-  letter-spacing:3px;
-  text-transform:uppercase;
   margin-bottom:20px
 }
-.cover-left .desc{
-  font-size:clamp(0.95rem,1.3vw,1.1rem);
-  color:rgba(255,255,255,0.6);
-  max-width:480px;
-  line-height:1.8;
-  margin-bottom:32px
+.cover-left .logo{max-width:180px;margin-bottom:24px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.3))}
+.cover-left h1{
+  font-family:Cabin,sans-serif;
+  font-size:clamp(2rem,4.5vw,3.4rem);
+  font-weight:700;line-height:1.1;
+  margin-bottom:6px;letter-spacing:-0.5px
 }
-.cover-actions{display:flex;gap:14px;flex-wrap:wrap}
+.cover-left .subtitle{
+  font-size:clamp(0.8rem,1.2vw,0.95rem);
+  color:rgba(255,255,255,0.45);
+  letter-spacing:3px;text-transform:uppercase;
+  margin-bottom:16px
+}
+.cover-left .desc{
+  font-size:clamp(0.9rem,1.2vw,1.05rem);
+  color:rgba(255,255,255,0.6);
+  max-width:440px;line-height:1.7;
+  margin-bottom:28px
+}
+.cover-actions{display:flex;gap:12px;flex-wrap:wrap}
 .cover-btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:15px 34px;border-radius:100px;
-  font-weight:600;font-size:0.9rem;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 30px;border-radius:100px;
+  font-weight:600;font-size:0.85rem;
   text-decoration:none;transition:all 0.3s
 }
-.cover-btn-primary{
-  background:var(--gold);color:#fff
-}
-.cover-btn-primary:hover{
-  background:#b0a53a;
-  transform:translateY(-3px);
-  box-shadow:0 12px 32px rgba(156,146,44,0.35)
-}
-.cover-btn-outline{
-  border:2px solid rgba(255,255,255,0.2);
-  color:#fff;
-  background:rgba(255,255,255,0.04)
-}
-.cover-btn-outline:hover{
-  border-color:rgba(255,255,255,0.5);
-  background:rgba(255,255,255,0.08);
-  transform:translateY(-3px)
-}
-.cover-meta{
-  display:flex;gap:28px;flex-wrap:wrap;
-  margin-top:36px
-}
-.cover-meta-item{
-  display:flex;align-items:center;gap:10px;
-  font-size:0.85rem;color:rgba(255,255,255,0.5)
-}
-.cover-meta-item i{color:var(--gold);font-size:1rem}
-.cover-right{
-  display:flex;justify-content:center;
-  perspective:1200px
-}
+.cover-btn-primary{background:var(--gold);color:#fff}
+.cover-btn-primary:hover{background:#b0a53a;transform:translateY(-2px);box-shadow:0 10px 28px rgba(156,146,44,0.3)}
+.cover-btn-outline{border:2px solid rgba(255,255,255,0.2);color:#fff;background:rgba(255,255,255,0.04)}
+.cover-btn-outline:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+.cover-right{display:flex;justify-content:center;perspective:1000px}
 .cover-mockup{
-  position:relative;
-  width:100%;
-  max-width:500px;
-  aspect-ratio:16/10;
-  background:rgba(255,255,255,0.06);
-  border-radius:16px;
+  width:100%;max-width:520px;
+  border-radius:14px;
   border:1px solid rgba(255,255,255,0.08);
   overflow:hidden;
-  transform:rotateY(-8deg) rotateX(4deg);
-  box-shadow:0 30px 80px rgba(0,0,0,0.3);
-  transition:transform 0.6s ease
-}
-.cover-mockup:hover{transform:rotateY(-3deg) rotateX(2deg)}
-.cover-mockup .mockup-bar{
-  display:flex;align-items:center;gap:8px;
-  padding:12px 16px;
-  background:rgba(255,255,255,0.06);
-  border-bottom:1px solid rgba(255,255,255,0.06)
-}
-.cover-mockup .mockup-dot{
-  width:10px;height:10px;border-radius:50%
-}
-.cover-mockup .mockup-dot:nth-child(1){background:#ff5f57}
-.cover-mockup .mockup-dot:nth-child(2){background:#febc2e}
-.cover-mockup .mockup-dot:nth-child(3){background:#28c840}
-.cover-mockup .mockup-url{
-  font-size:0.7rem;color:rgba(255,255,255,0.25);
-  margin-left:12px
-}
-.cover-mockup .mockup-screen{
-  padding:0;
-  aspect-ratio:16/7.5;
-  overflow:hidden
-}
-.cover-mockup .mockup-screen img{
-  width:100%;height:100%;
-  object-fit:cover;
-  display:block;
+  transform:rotateY(-6deg) rotateX(3deg);
+  box-shadow:0 25px 70px rgba(0,0,0,0.35);
   transition:transform 0.5s ease
 }
-.cover-mockup:hover .mockup-screen img{transform:scale(1.02)}
-
-/* ——— device mockups ——— */
-.device-frame{
-  position:relative;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 8px 40px rgba(0,0,0,0.08);
-  border:1px solid rgba(0,0,0,0.04);
-  background:#fff;
-  transition:transform 0.5s ease,box-shadow 0.5s ease
-}
-.device-frame:hover{
-  transform:translateY(-6px);
-  box-shadow:0 16px 60px rgba(0,0,0,0.12)
-}
-.device-frame .bar{
+.cover-mockup:hover{transform:rotateY(-2deg) rotateX(1deg)}
+.cover-mockup .bar{
   display:flex;align-items:center;gap:6px;
   padding:10px 14px;
-  background:#f8f8f8;
-  border-bottom:1px solid rgba(0,0,0,0.04)
+  background:rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.05)
 }
-.device-frame .bar .dot{
-  width:8px;height:8px;border-radius:50%
-}
-.device-frame .bar .dot:nth-child(1){background:#ff5f57}
-.device-frame .bar .dot:nth-child(2){background:#febc2e}
-.device-frame .bar .dot:nth-child(3){background:#28c840}
-.device-frame .bar .url{
-  font-size:0.65rem;color:#bbb;
-  margin-left:8px;font-weight:400
-}
-.device-frame .screen{
-  padding:0;
-  background:linear-gradient(135deg,#1a2e22,#224839);
-  aspect-ratio:16/9;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;
-  overflow:hidden
-}
-.device-frame .screen .screen-content{
-  text-align:center;color:#fff;
-  padding:24px
-}
-.device-frame .screen .screen-content .screen-logo{
-  font-family:Cabin,sans-serif;
-  font-size:clamp(0.9rem,2vw,1.3rem);
-  font-weight:700;
-  color:rgba(255,255,255,0.9);
-  margin-bottom:4px
-}
-.device-frame .screen .screen-content .screen-sub{
-  font-size:clamp(0.6rem,1vw,0.75rem);
-  color:rgba(255,255,255,0.4);
-  letter-spacing:2px;
-  text-transform:uppercase
-}
-.device-frame .screen .screen-content .screen-bar{
-  width:40px;height:3px;
-  background:var(--gold);
-  margin:12px auto 16px;
-  border-radius:2px
-}
-.device-frame .screen .screen-content .screen-lines{
-  display:flex;flex-direction:column;gap:6px;align-items:center;max-width:200px;margin:0 auto
-}
-.device-frame .screen .screen-content .screen-lines span{
-  height:5px;border-radius:4px;
-  background:rgba(255,255,255,0.08)
-}
-.device-frame .screen .screen-content .screen-lines span:nth-child(1){width:70%}
-.device-frame .screen .screen-content .screen-lines span:nth-child(2){width:50%}
-.device-frame .screen .screen-content .screen-lines span:nth-child(3){width:60%}
-.screen-home .screen{background:linear-gradient(135deg,#1a2e22,#224839)}
-.screen-menu .screen{background:linear-gradient(135deg,#9c922c,#8a8228)}
-.screen-contatti .screen{background:linear-gradient(135deg,#383838,#2c2c2c)}
+.cover-mockup .bar .dot{width:8px;height:8px;border-radius:50%}
+.cover-mockup .bar .dot:nth-child(1){background:#ff5f57}
+.cover-mockup .bar .dot:nth-child(2){background:#febc2e}
+.cover-mockup .bar .dot:nth-child(3){background:#28c840}
+.cover-mockup .bar .url{font-size:0.65rem;color:rgba(255,255,255,0.25);margin-left:8px}
+.cover-mockup .screen{aspect-ratio:16/9;overflow:hidden}
+.cover-mockup .screen img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease}
+.cover-mockup:hover .screen img{transform:scale(1.02)}
 
-/* ——— cards ——— */
+/* card grid */
 .card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  margin-top:36px
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:32px
 }
 .card{
-  background:#fff;
-  border-radius:var(--radius);
-  padding:32px;
-  box-shadow:var(--card-shadow);
-  border:1px solid rgba(0,0,0,0.04);
-  transition:all 0.4s ease
+  background:#fff;border-radius:var(--radius);padding:28px;
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);
+  transition:all 0.35s ease
 }
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--card-hover-shadow)
-}
-.card .icon{
-  width:52px;height:52px;
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.card .ico{
+  width:44px;height:44px;
   display:flex;align-items:center;justify-content:center;
-  background:var(--gold-light);
-  color:var(--gold);
-  border-radius:14px;
-  font-size:1.4rem;
-  margin-bottom:18px;
-  transition:all 0.3s ease
+  background:var(--gold-light);color:var(--gold);
+  border-radius:12px;font-size:1.2rem;
+  margin-bottom:14px;transition:all 0.3s ease
 }
-.card:hover .icon{
-  background:var(--gold);
-  color:#fff;
-  transform:scale(1.05) rotate(-3deg)
-}
-.card h3{
-  font-family:Cabin,sans-serif;
-  font-size:1.1rem;
-  margin-bottom:6px;
-  color:var(--dark)
-}
-.card p{font-size:0.9rem;color:var(--text-light);line-height:1.6}
+.card:hover .ico{background:var(--gold);color:#fff;transform:scale(1.05) rotate(-3deg)}
+.card h3{font-family:Cabin,sans-serif;font-size:1rem;margin-bottom:4px;color:var(--dark)}
+.card p{font-size:0.85rem;color:var(--text-light)}
 
-/* ——— check list ——— */
-.check-list{
-  max-width:680px;margin:36px auto 0
+/* showcase */
+.showcase-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px
 }
+.showcase-card{
+  background:#fff;border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04);
+  transition:all 0.35s ease
+}
+.showcase-card:hover{transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,0.08)}
+.showcase-card .vis{height:180px;overflow:hidden;position:relative}
+.showcase-card .vis img{width:100%;height:100%;object-fit:cover;display:block}
+.showcase-card .vis .shine{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,0.1) 50%,transparent 60%);
+  transition:transform 0.5s ease;transform:translateX(-100%)
+}
+.showcase-card:hover .vis .shine{transform:translateX(100%)}
+.showcase-card .body{padding:20px}
+.showcase-card .body .tag{
+  display:inline-block;font-size:0.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--gold);background:var(--gold-light);
+  padding:3px 10px;border-radius:100px;margin-bottom:6px
+}
+.showcase-card .body h3{font-family:Cabin,sans-serif;font-size:1rem;margin-bottom:3px;color:var(--dark)}
+.showcase-card .body p{font-size:0.83rem;color:var(--text-light)}
+
+/* check list */
+.check-list{max-width:640px;margin:28px auto 0}
 .check-item{
-  display:flex;align-items:flex-start;gap:18px;
-  padding:18px 0;
-  border-bottom:1px solid rgba(0,0,0,0.04)
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 0;border-bottom:1px solid rgba(0,0,0,0.04)
 }
 .check-item:last-child{border:none}
 .check-item .check{
-  width:30px;height:30px;
+  width:26px;height:26px;
   display:flex;align-items:center;justify-content:center;
   background:var(--gold);color:#fff;
-  border-radius:50%;
-  font-size:0.75rem;flex-shrink:0;
-  margin-top:2px
+  border-radius:50%;font-size:0.7rem;flex-shrink:0;margin-top:2px
 }
-.check-item div h4{font-size:0.95rem;color:var(--dark);margin-bottom:2px}
-.check-item div p{font-size:0.85rem;color:var(--text-light)}
+.check-item div h4{font-size:0.9rem;color:var(--dark);margin-bottom:2px}
+.check-item div p{font-size:0.83rem;color:var(--text-light)}
 
-/* ——— page showcase ——— */
-.showcase-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
-  margin-top:36px
+/* steps */
+.steps-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:32px
 }
-.showcase-card{
-  background:#fff;
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:var(--card-shadow);
-  border:1px solid rgba(0,0,0,0.04);
-  transition:all 0.4s ease
+.step{
+  text-align:center;padding:28px 16px;
+  background:#fff;border-radius:var(--radius);
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.04)
 }
-.showcase-card:hover{
-  transform:translateY(-6px);
-  box-shadow:var(--card-hover-shadow)
-}
-.showcase-card .visual{
-  height:200px;
-  display:flex;align-items:center;justify-content:center;
-  position:relative;
-  overflow:hidden
-}
-.showcase-card .visual i{color:#fff;font-size:2.4rem;position:relative;z-index:1}
-.showcase-card .visual .shine{
-  position:absolute;inset:0;
-  background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,0.08) 50%,transparent 60%);
-  transition:transform 0.6s ease;
-  transform:translateX(-100%)
-}
-.showcase-card:hover .visual .shine{transform:translateX(100%)}
-.showcase-card .body{padding:24px}
-.showcase-card .body .tag{
-  display:inline-block;
-  font-size:0.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--gold);
-  background:var(--gold-light);
-  padding:3px 10px;border-radius:100px;
-  margin-bottom:8px
-}
-.showcase-card .body h3{
-  font-family:Cabin,sans-serif;
-  font-size:1.1rem;
-  margin-bottom:4px;
-  color:var(--dark)
-}
-.showcase-card .body p{font-size:0.85rem;color:var(--text-light)}
-.showcase-card .body ul{margin-top:10px;padding-left:0;list-style:none}
-.showcase-card .body ul li{
-  font-size:0.8rem;color:#999;
-  padding:2px 0 2px 18px;
-  position:relative
-}
-.showcase-card .body ul li::before{
-  content:'\2022';
-  position:absolute;left:2px;
-  color:var(--gold)
-}
-
-/* ——— color swatches ——— */
-.swatch-grid{
-  display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
-  margin-top:36px
-}
-.swatch{
-  text-align:center;
-  width:100px
-}
-.swatch-circle{
-  width:72px;height:72px;border-radius:50%;
-  margin:0 auto 10px;
-  box-shadow:0 4px 16px rgba(0,0,0,0.08);
-  position:relative;
-  transition:transform 0.3s ease
-}
-.swatch:hover .swatch-circle{transform:scale(1.08)}
-.swatch-circle.bordered{border:2px solid #e0ddd6}
-.swatch-label{font-size:0.75rem;color:var(--text-light);font-weight:500}
-.swatch-hex{font-size:0.7rem;color:#bbb;font-family:monospace}
-
-/* ——— typography ——— */
-.type-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
-  margin-top:36px
-}
-.type-card{
-  background:#fff;
-  border-radius:var(--radius);
-  padding:32px;
-  box-shadow:var(--card-shadow);
-  border:1px solid rgba(0,0,0,0.04);
-  transition:transform 0.3s ease
-}
-.type-card:hover{transform:translateY(-3px)}
-.type-card .preview{font-size:2rem;margin-bottom:8px}
-.type-card .name{font-size:0.85rem;color:var(--text-light)}
-.type-card .detail{font-size:0.75rem;color:#999;margin-top:4px}
-.type-card .use{
-  display:inline-block;
-  font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;
-  color:var(--gold);
-  background:var(--gold-light);
-  padding:3px 12px;border-radius:100px;
-  margin-top:12px
-}
-
-/* ——— quote ——— */
-.quote-box{
-  max-width:720px;margin:36px auto 0;
-  background:#fff;
-  border-radius:var(--radius);
-  padding:44px 48px;
-  border-left:4px solid var(--gold);
-  box-shadow:var(--card-shadow);
-  position:relative
-}
-.quote-box::before{
-  content:'\201C';
-  position:absolute;top:24px;left:24px;
-  font-family:Georgia,serif;
-  font-size:4rem;color:var(--gold-light);
-  line-height:1
-}
-.quote-box p{
-  font-size:1.05rem;
-  color:#555;
-  line-height:1.8
-}
-
-/* ——— numbers ——— */
-.photo-strip{
-  margin:36px auto 0;
-  max-width:720px;
-  border-radius:var(--radius);
-  overflow:hidden;
-  box-shadow:0 4px 20px rgba(0,0,0,0.06)
-}
-.photo-strip-inner{
-  display:grid;
-  grid-template-columns:repeat(4,1fr)
-}
-.photo-strip-inner img{
-  width:100%;
-  aspect-ratio:16/10;
-  object-fit:cover;
-  display:block
-}
-@media(max-width:600px){
-  .photo-strip-inner{grid-template-columns:repeat(2,1fr)}
-  .photo-strip-inner img:last-child{display:none}
-}
-
-.numbers-grid{
-  display:flex;gap:48px;justify-content:center;flex-wrap:wrap;
-  margin-top:40px
-}
-.num-item{text-align:center}
-.num-value{
-  font-family:Cabin,sans-serif;
-  font-size:2.4rem;font-weight:700;
-  color:var(--green);
-  line-height:1
-}
-.num-label{
-  font-size:0.8rem;color:#999;
-  margin-top:4px
-}
-
-/* ——— features ——— */
-.feature-grid-alt{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:28px;
-  margin-top:36px
-}
-.feature-alt{
-  display:flex;gap:20px;
-  align-items:flex-start
-}
-.feature-alt .icon-circle{
-  width:44px;height:44px;
-  display:flex;align-items:center;justify-content:center;
-  background:var(--gold-light);
-  color:var(--gold);
-  border-radius:50%;
-  font-size:1.1rem;
-  flex-shrink:0;
-  margin-top:2px;
-  transition:all 0.3s ease
-}
-.feature-alt:hover .icon-circle{
-  background:var(--gold);
-  color:#fff;
-  transform:scale(1.1)
-}
-.feature-alt h4{font-size:0.95rem;color:var(--dark);margin-bottom:2px}
-.feature-alt p{font-size:0.85rem;color:var(--text-light)}
-
-/* ——— process ——— */
-.process-row{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:24px;
-  margin-top:36px;
-  position:relative
-}
-.process-step{
-  text-align:center;
-  padding:32px 20px;
-  background:#fff;
-  border-radius:var(--radius);
-  box-shadow:var(--card-shadow);
-  border:1px solid rgba(0,0,0,0.04);
-  position:relative
-}
-.process-step .step-num{
-  width:40px;height:40px;
+.step .num{
+  width:36px;height:36px;
   display:flex;align-items:center;justify-content:center;
   background:var(--gold);color:#fff;
-  border-radius:50%;
-  font-size:0.85rem;font-weight:700;
-  margin:0 auto 16px
+  border-radius:50%;font-size:0.8rem;font-weight:700;
+  margin:0 auto 12px
 }
-.process-step h4{font-family:Cabin,sans-serif;font-size:0.95rem;margin-bottom:4px}
-.process-step p{font-size:0.8rem;color:var(--text-light)}
+.step h4{font-family:Cabin,sans-serif;font-size:0.9rem;margin-bottom:4px}
+.step p{font-size:0.8rem;color:var(--text-light)}
 
-/* ——— cta section ——— */
-#cta-final{
-  padding:100px 0;
+/* cta */
+#cta{
+  padding:80px 0;
   background:linear-gradient(160deg,var(--green-dark),var(--green),#2d5e4a);
-  color:#fff;
-  text-align:center;
-  position:relative;
-  overflow:hidden
+  color:#fff;text-align:center;position:relative;overflow:hidden
 }
-#cta-final .cta-orb{
-  position:absolute;
-  width:500px;height:500px;
-  border-radius:50%;
-  background:rgba(156,146,44,0.06);
-  filter:blur(80px);
-  top:-200px;right:-100px;
-  pointer-events:none;
-  animation:orbFloat 20s ease-in-out infinite alternate
+#cta .orb{
+  position:absolute;width:400px;height:400px;border-radius:50%;
+  background:rgba(156,146,44,0.06);filter:blur(80px);
+  top:-150px;right:-80px;pointer-events:none;
+  animation:drift 20s ease-in-out infinite alternate
 }
-#cta-final .cta-title{
-  font-family:Cabin,sans-serif;
-  font-size:clamp(1.6rem,3.5vw,2.4rem);
-  font-weight:600;
-  margin-bottom:12px
-}
-#cta-final .cta-sub{
-  font-size:1rem;
-  color:rgba(255,255,255,0.55);
-  max-width:500px;
-  margin:0 auto 32px
-}
-#cta-final .cta-btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:16px 40px;
-  border-radius:100px;
+#cta h2{font-family:Cabin,sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:600;margin-bottom:8px}
+#cta p{font-size:0.95rem;color:rgba(255,255,255,0.55);max-width:460px;margin:0 auto 24px}
+#cta .btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 36px;border-radius:100px;
   background:var(--gold);color:#fff;
-  font-weight:600;font-size:0.95rem;
-  text-decoration:none;
+  font-weight:600;font-size:0.9rem;text-decoration:none;
   transition:all 0.3s ease
 }
-#cta-final .cta-btn:hover{
-  background:#b0a53a;
-  transform:translateY(-3px);
-  box-shadow:0 16px 40px rgba(156,146,44,0.35)
-}
+#cta .btn:hover{background:#b0a53a;transform:translateY(-2px);box-shadow:0 12px 32px rgba(156,146,44,0.3)}
 
-/* ——— responsive ——— */
+/* lang flags */
+.lang-row{
+  display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:24px
+}
+.lang-item{text-align:center}
+.lang-item .flag{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin:0 auto 6px;
+  background:rgba(255,255,255,0.06)
+}
+.lang-item .code{font-size:0.8rem;font-weight:600;color:var(--text)}
+.lang-item .name{font-size:0.7rem;color:#999}
+
+/* responsive */
 @media(max-width:1024px){
-  .cover-content{grid-template-columns:1fr;gap:40px;text-align:center}
+  .cover-inner{grid-template-columns:1fr;gap:36px;text-align:center}
   .cover-left .desc{margin-left:auto;margin-right:auto}
   .cover-actions{justify-content:center}
-  .cover-meta{justify-content:center}
-  .cover-mockup{max-width:400px;transform:none;margin:0 auto}
+  .cover-mockup{max-width:420px;transform:none;margin:0 auto}
   .cover-mockup:hover{transform:none}
 }
 @media(max-width:768px){
-  .section{padding:64px 0}
-  .quote-box{padding:28px 24px}
+  .section{padding:60px 0}
+  .cover-mockup{max-width:100%}
   .card-grid{gap:16px}
   .showcase-grid{gap:16px}
-  .process-row{gap:16px}
-  .feature-grid-alt{gap:20px}
-  .numbers-grid{gap:28px}
-  .num-value{font-size:1.8rem}
-  .cover-mockup{max-width:320px}
-  .cover-meta{gap:16px}
+  .steps-grid{gap:14px}
 }
 @media(max-width:480px){
-  .cover-mockup{max-width:100%}
   .cover-actions{flex-direction:column;align-items:center}
 }
 
-/* ——— navbar ——— */
+/* navbar */
 .navbar{
-  position:fixed;top:0;left:0;width:100%;
-  z-index:1000;
-  padding:10px 0;
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:8px 0;
   background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(0,0,0,0.06);
-  display:none;
-  transition:opacity 0.3s
+  display:none;transition:opacity 0.3s
 }
 .navbar-inner{
-  display:flex;align-items:center;justify-content:center;gap:2px;
-  flex-wrap:wrap;
-  max-width:1140px;margin:0 auto;padding:0 24px
+  display:flex;align-items:center;justify-content:center;gap:2px;flex-wrap:wrap;
+  max-width:1140px;margin:0 auto;padding:0 20px
 }
-@media(max-width:768px){.navbar-inner{gap:0}}
 .navbar a{
   color:#555;text-decoration:none;
-  font-size:0.75rem;font-weight:500;
-  padding:6px 10px;border-radius:8px;
-  transition:all 0.2s;
-  white-space:nowrap
+  font-size:0.72rem;font-weight:500;
+  padding:5px 8px;border-radius:6px;
+  transition:all 0.2s;white-space:nowrap
 }
-@media(max-width:768px){.navbar a{font-size:0.7rem;padding:4px 6px}}
 .navbar a:hover{color:var(--gold);background:var(--gold-light)}
+@media(max-width:768px){.navbar a{font-size:0.65rem;padding:4px 5px}}
 </style>
 </head>
 <body>
@@ -734,566 +330,381 @@ body{
   <div class="navbar-inner">
     <a href="#cover">Home</a>
     <a href="#progetto">Progetto</a>
-    <a href="#perche-sito">Perché un sito</a>
-    <a href="#pagine">Pagine</a>
-    <a href="#design">Design</a>
-    <a href="#funzionalita">Funzionalità</a>
-    <a href="#tecnologia">Tecnologia</a>
-    <a href="#perche-noi">Perché noi</a>
-    <a href="#utilita">Utilità</a>
+    <a href="#home">Home</a>
+    <a href="#chi-siamo">Chi siamo</a>
+    <a href="#galleria">Galleria</a>
+    <a href="#menu">Menù</a>
+    <a href="#prenotazioni">Prenotazioni</a>
+    <a href="#turisti">Turisti</a>
+    <a href="#sintesi">Sintesi</a>
+    <a href="#passi">Prossimi passi</a>
   </div>
 </div>
 
-<!-- COVER -->
+<!-- SLIDE 1 - COVER -->
 <section id="cover">
-  <div class="bg-orb bg-orb-1"></div>
-  <div class="bg-orb bg-orb-2"></div>
-  <div class="bg-orb bg-orb-3"></div>
-  <div class="grid-lines"></div>
-  <div class="cover-content">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="grid"></div>
+  <div class="cover-inner">
     <div class="cover-left">
-      <div class="badge">Mockly &mdash; Proposta di realizzazione</div>
-      <img src="img/logo-senza-sfondo.png" alt="Ta Matete" class="logo-cover">
-      <h1>Ta Matete</h1>
-      <p class="tagline">Ristorante Bistrot &bull; Oristano</p>
-      <p class="desc">Un sito web su misura per raccontare la tua cucina, accogliere gli ospiti da tutto il mondo e trasformare ogni visita in una prenotazione.</p>
+      <div class="badge">Mockly &mdash; Proposta di progetto digitale</div>
+      <img src="img/logo-senza-sfondo.png" alt="Ta Matete" class="logo">
+      <h1>Il nuovo sito web del ristorante</h1>
+      <p class="subtitle">Ristorante Bistrot &bull; Piazza Giovanni Corrias, Oristano</p>
+      <p class="desc">Una vetrina digitale su misura per raccontare Ta Matete, accogliere gli ospiti da tutto il mondo e trasformare ogni visita in una prenotazione.</p>
       <div class="cover-actions">
         <a href="index.html" class="cover-btn cover-btn-primary" target="_blank"><i class="fas fa-external-link-alt"></i> Vedi il sito live</a>
         <a href="#progetto" class="cover-btn cover-btn-outline">Scopri il progetto</a>
       </div>
-      <div class="cover-meta">
-        <span class="cover-meta-item"><i class="fas fa-globe"></i> 4 lingue</span>
-        <span class="cover-meta-item"><i class="fas fa-utensils"></i> 80+ piatti</span>
-        <span class="cover-meta-item"><i class="fas fa-images"></i> 27 foto</span>
-        <span class="cover-meta-item"><i class="fas fa-mobile-alt"></i> 100% responsive</span>
-      </div>
     </div>
     <div class="cover-right">
       <div class="cover-mockup">
-        <div class="mockup-bar">
-          <span class="mockup-dot"></span>
-          <span class="mockup-dot"></span>
-          <span class="mockup-dot"></span>
-          <span class="mockup-url">tamatete.it</span>
+        <div class="bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="url">tamatete.it</span>
         </div>
-        <div class="mockup-screen">
-          <img src="img/foto1.png" alt="Anteprima homepage Ta Matete">
+        <div class="screen">
+          <img src="img/pptx_home.png" alt="Anteprima homepage Ta Matete">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROGETTO -->
+<!-- SLIDE 4 - IL PROGETTO -->
 <section class="section" id="progetto">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">01 &mdash; Il progetto</span>
-      <h2 class="section-title">Un sito pensato per Ta Matete</h2>
-      <p class="section-sub">Cinque pagine, un design unico, costruito intorno al tuo ristorante</p>
-    </div>
-    <div class="quote-box reveal reveal-delay-1">
-      <p>Ta Matete non è un ristorante come gli altri, e il sito non poteva essere un template. Abbiamo progettato ogni elemento partendo dal logo, dai colori aziendali e dall'atmosfera del bistrot. Il risultato è un sito che somiglia al locale: accogliente, curato, con il giusto equilibrio tra eleganza e autenticità.</p>
-    </div>
-    <div class="photo-strip reveal reveal-delay-2">
-      <div class="photo-strip-inner">
-        <img src="img/foto1.png" alt="Homepage Ta Matete">
-        <img src="img/menu1.png" alt="Menù Ta Matete">
-        <img src="img/contatti1.png" alt="Contatti Ta Matete">
-        <img src="img/cookies1.png" alt="Cookie Policy Ta Matete">
-      </div>
-    </div>
-    <div class="numbers-grid reveal reveal-delay-3">
-      <div class="num-item">
-        <div class="num-value">5</div>
-        <div class="num-label">pagine</div>
-      </div>
-      <div class="num-item">
-        <div class="num-value">4</div>
-        <div class="num-label">lingue</div>
-      </div>
-      <div class="num-item">
-        <div class="num-value">11</div>
-        <div class="num-label">categorie menù</div>
-      </div>
-      <div class="num-item">
-        <div class="num-value">27</div>
-        <div class="num-label">foto in galleria</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PERCHE AVERE UN SITO WEB -->
-<section class="section section-alt" id="perche-sito">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">02 &mdash; Perché un sito web</span>
-      <h2 class="section-title">Oggi i clienti cercano online</h2>
-      <p class="section-sub">Prima di sedersi al tavolo, la prima visita è sullo schermo. Un sito professionale trasforma la ricerca in prenotazione.</p>
+      <span class="section-label">Il progetto</span>
+      <h2 class="section-title">Una vetrina online che lavora per il ristorante</h2>
     </div>
     <div class="card-grid">
-      <div class="card reveal reveal-delay-1">
-        <div class="icon"><i class="fas fa-search"></i></div>
-        <h3>Oristano ti cerca su Google</h3>
-        <p>8 persone su 10 cercano online prima di scegliere un ristorante. Senza sito, chi cerca "dove mangiare a Oristano" non trova Ta Matete.</p>
+      <div class="card reveal reveal-d1">
+        <div class="ico"><i class="fas fa-globe"></i></div>
+        <h3>Far conoscere Ta Matete</h3>
+        <p>Anche a chi non passa per Piazza Corrias, con una presenza professionale e curata che riflette la qualità del ristorante.</p>
       </div>
-      <div class="card reveal reveal-delay-2">
-        <div class="icon"><i class="fas fa-ship"></i></div>
-        <h3>Parla ai turisti in 4 lingue</h3>
-        <p>Visitatori da tutta Europa, molti dal porto crociere. Il sito parla inglese, francese e spagnolo oltre all'italiano. Il turista capisce, sceglie, prenota.</p>
+      <div class="card reveal reveal-d2">
+        <div class="ico"><i class="fas fa-calendar-check"></i></div>
+        <h3>Più prenotazioni dirette</h3>
+        <p>Senza passare da terze piattaforme: form, telefono e WhatsApp in un click. Ogni richiesta arriva direttamente a te.</p>
       </div>
-      <div class="card reveal reveal-delay-3">
-        <div class="icon"><i class="fas fa-book-open"></i></div>
-        <h3>Menù sempre aggiornato</h3>
-        <p>Niente foto sui social. Il menù è online, completo di prezzi, descrizioni e allergeni. Il cliente sa cosa mangerà prima ancora di chiamare.</p>
+      <div class="card reveal reveal-d3">
+        <div class="ico"><i class="fas fa-language"></i></div>
+        <h3>Parlare la lingua dei turisti</h3>
+        <p>Il sito è disponibile in italiano, inglese, francese e spagnolo. Il turista legge il menù nella sua lingua e prenota con un click.</p>
       </div>
-      <div class="card reveal reveal-delay-4">
-        <div class="icon"><i class="fas fa-percent"></i></div>
-        <h3>Prenotazioni senza commissioni</h3>
-        <p>Niente TheFork o altri intermediari. Il cliente prenota dal sito, la richiesta arriva via email. Zero commissioni su ogni coperto.</p>
+    </div>
+    <div class="showcase-card reveal reveal-d1" style="max-width:520px;margin:32px auto 0">
+      <div class="vis" style="height:auto;aspect-ratio:4/3">
+        <img src="img/pptx_ingresso.jpg" alt="Ta Matete">
+      </div>
+      <div class="body" style="text-align:center">
+        <p style="font-size:0.8rem;color:#999">L'ingresso storico di Ta Matete, Piazza Giovanni Corrias</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PAGINE -->
-<section class="section" id="pagine">
+<!-- SLIDE 5 - LA HOME PAGE -->
+<section class="section section-alt" id="home">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">03 &mdash; Le pagine</span>
-      <h2 class="section-title">Tutto quello che serve, niente di più</h2>
-      <p class="section-sub">Ogni pagina ha un obiettivo preciso: accogliere, raccontare, far prenotare.</p>
+      <span class="section-label">La Home Page</span>
+      <h2 class="section-title">Una prima impressione all'altezza del locale</h2>
+      <p class="section-sub">Logo, atmosfera e call-to-action immediate: prenotare un tavolo o scoprire il menù è a un clic di distanza.</p>
     </div>
     <div class="showcase-grid">
-      <div class="showcase-card reveal reveal-delay-1">
-        <div class="visual" style="background:linear-gradient(135deg,#1a2e22,#224839);padding:0;overflow:hidden">
+      <div class="showcase-card reveal reveal-d1" style="grid-column:1/-1;max-width:700px;margin:0 auto">
+        <div class="vis" style="height:auto;aspect-ratio:16/9">
           <div class="shine"></div>
-          <img src="img/foto1.png" alt="Homepage Ta Matete" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1">
+          <img src="img/pptx_home.png" alt="Homepage Ta Matete">
         </div>
-        <div class="body">
-          <span class="tag">index.html &mdash; Home</span>
-          <h3>La vetrina</h3>
-          <p>Hero con logo animato, About con foto del locale, statistiche, galleria fotografica con carousel, form di prenotazione rapida.</p>
-        </div>
-      </div>
-      <div class="showcase-card reveal reveal-delay-2">
-        <div class="visual" style="padding:0;overflow:hidden">
-          <div class="shine"></div>
-          <img src="img/menu1.png" alt="Menù Ta Matete" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1">
-        </div>
-        <div class="body">
-          <span class="tag">menu.html &mdash; Menù</span>
-          <h3>Il cuore dell'offerta</h3>
-          <p>11 categorie con tab switching, prezzi, descrizioni, sottocategorie e toggle allergeni. Tutto il menù di Ta Matete in 4 lingue.</p>
-        </div>
-      </div>
-      <div class="showcase-card reveal reveal-delay-3">
-        <div class="visual" style="padding:0;overflow:hidden">
-          <div class="shine"></div>
-          <img src="img/contatti1.png" alt="Contatti Ta Matete" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1">
-        </div>
-        <div class="body">
-          <span class="tag">contatti.html &mdash; Contatti</span>
-          <h3>Il ponte con il cliente</h3>
-          <p>Due colonne: form prenotazione e card contatti con mappa. Telefono, email, WhatsApp, orari, tutto a portata di click.</p>
-        </div>
-      </div>
-      <div class="showcase-card reveal reveal-delay-4">
-        <div class="visual" style="padding:0;overflow:hidden">
-          <div class="shine"></div>
-          <img src="img/cookies1.png" alt="Cookie Policy Ta Matete" style="width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1">
-        </div>
-        <div class="body">
-          <span class="tag">cookie.html / privacy.html</span>
-          <h3>Pagine legali</h3>
-          <p>Cookie Policy e Privacy Policy richieste dalla legge, con lo stesso design del sito. Nessuna rottura di continuità.</p>
+        <div class="body" style="text-align:center">
+          <span class="tag">tamatete.it</span>
+          <p style="font-size:0.8rem;color:#999">Hero con logo, sezione About, statistiche, galleria fotografica e form di prenotazione rapida.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DESIGN -->
-<section class="section section-alt" id="design">
+<!-- SLIDE 6 - CHI SIAMO -->
+<section class="section" id="chi-siamo">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">04 &mdash; Design</span>
-      <h2 class="section-title">Identità visiva coerente</h2>
-      <p class="section-sub">Il sito assomiglia al ristorante: elegante, naturale, con personalità.</p>
-    </div>
-
-    <h3 style="font-family:Cabin,sans-serif;font-size:1.1rem;margin-bottom:4px;text-align:center;color:var(--dark)" class="reveal">Palette colori</h3>
-    <p style="font-size:0.85rem;color:#999;text-align:center;margin-bottom:4px" class="reveal reveal-delay-1">I colori del logo e del ristorante applicati a ogni elemento</p>
-    <div class="swatch-grid reveal reveal-delay-2">
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#9c922c"></div>
-        <div class="swatch-label">Oro</div>
-        <div class="swatch-hex">#9c922c</div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#224839"></div>
-        <div class="swatch-label">Verde logo</div>
-        <div class="swatch-hex">#224839</div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#383838"></div>
-        <div class="swatch-label">Testo scuro</div>
-        <div class="swatch-hex">#383838</div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle bordered" style="background:#fff"></div>
-        <div class="swatch-label">Bianco</div>
-        <div class="swatch-hex">#ffffff</div>
-      </div>
-      <div class="swatch">
-        <div class="swatch-circle" style="background:#f5f3ed"></div>
-        <div class="swatch-label">Crema</div>
-        <div class="swatch-hex">#f5f3ed</div>
-      </div>
-    </div>
-
-    <h3 style="font-family:Cabin,sans-serif;font-size:1.1rem;margin:56px 0 4px;text-align:center;color:var(--dark)" class="reveal">Tipografia</h3>
-    <p style="font-size:0.85rem;color:#999;text-align:center;margin-bottom:4px" class="reveal reveal-delay-1">Due caratteri, una gerarchia chiara, massima leggibilità su ogni schermo</p>
-    <div class="type-grid reveal reveal-delay-2">
-      <div class="type-card">
-        <div class="preview" style="font-family:Cabin;font-weight:600">Cabin</div>
-        <div class="name">Google Fonts — titoli e intestazioni</div>
-        <div class="detail">Pesi: 400, 500, 600, 700 — sans-serif geometrico, caldo, leggibile</div>
-        <div class="use">Titoli, bottoni, navbar</div>
-      </div>
-      <div class="type-card">
-        <div class="preview" style="font-family:Inter;font-weight:400">Inter</div>
-        <div class="name">Google Fonts — corpo del testo</div>
-        <div class="detail">Pesi: 300, 400, 500, 700 — progettato per schermi, eccellente leggibilità</div>
-        <div class="use">Descrizioni, menu, form, footer</div>
-      </div>
-    </div>
-
-    <h3 style="font-family:Cabin,sans-serif;font-size:1.1rem;margin:56px 0 20px;text-align:center;color:var(--dark)" class="reveal">Elementi chiave</h3>
-    <div class="feature-grid-alt reveal">
-      <div class="feature-alt reveal reveal-delay-1">
-        <div class="icon-circle"><i class="fas fa-image"></i></div>
-        <div>
-          <h4>Sfondo fisso con maschera verde</h4>
-          <p>L'immagine del locale rimane fissa durante lo scroll, coperta da una velatura verde che richiama il logo. Le sezioni scorrono sopra creando profondità.</p>
-        </div>
-      </div>
-      <div class="feature-alt reveal reveal-delay-2">
-        <div class="icon-circle"><i class="fas fa-glass-cheers"></i></div>
-        <div>
-          <h4>Effetto vetro (frosted glass)</h4>
-          <p>Ogni sezione ha una sfocatura sul fondo. Il testo resta leggibile, lo sfondo resta visibile. Le sezioni sembrano fluttuare sulla pagina.</p>
-        </div>
-      </div>
-      <div class="feature-alt reveal reveal-delay-3">
-        <div class="icon-circle"><i class="fas fa-star"></i></div>
-        <div>
-          <h4>Dettagli dorati</h4>
-          <p>L'oro del logo diventa filo conduttore: bordi, hover, bottoni, decorazioni. Abbastanza per dare carattere, mai troppo per essere pacchiano.</p>
-        </div>
-      </div>
-      <div class="feature-alt reveal reveal-delay-4">
-        <div class="icon-circle"><i class="fas fa-layer-group"></i></div>
-        <div>
-          <h4>Box bianchi in About</h4>
-          <p>Testo e foto del locale su sfondo bianco con ombra leggera. Il contrasto con le sezioni trasparenti guida lo sguardo del visitatore.</p>
-        </div>
-      </div>
-      <div class="feature-alt reveal reveal-delay-5">
-        <div class="icon-circle"><i class="fas fa-magic"></i></div>
-        <div>
-          <h4>Animazioni sottili</h4>
-          <p>Particelle dorate nell'hero, comparsa graduale degli elementi con lo scroll, hover su bottoni e card. Il sito si muove con naturalezza.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FUNZIONALITA -->
-<section class="section" id="funzionalita">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">05 &mdash; Funzionalità</span>
-      <h2 class="section-title">Tutto quello che il sito sa fare</h2>
-      <p class="section-sub">Ogni funzionalità è pensata per migliorare l'esperienza di chi visita e semplificare la gestione per chi accoglie.</p>
-    </div>
-    <div class="check-list">
-      <div class="check-item reveal reveal-delay-1">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Selettore lingua istantaneo</h4>
-          <p>IT / EN / FR / ES — il cambio lingua traduce tutta la pagina senza ricaricare. Menù, form, testi: ogni parola nella lingua giusta.</p>
-        </div>
-      </div>
-      <div class="check-item reveal reveal-delay-2">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Galleria con lightbox a schermo intero</h4>
-          <p>27 foto in un carousel fluido. Clicchi, si apre a schermo intero, sfiori per navigare. Ideale per mostrare l'atmosfera, i piatti, la sala.</p>
-        </div>
-      </div>
-      <div class="check-item reveal reveal-delay-3">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Menù dinamico completo</h4>
-          <p>11 categorie con tab, sottocategorie, prezzi, descrizioni e toggle allergeni. I dati sono in JavaScript, facili da aggiornare senza toccare l'HTML.</p>
-        </div>
-      </div>
-      <div class="check-item reveal reveal-delay-4">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Form di prenotazione diretto</h4>
-          <p>Data, ora, persone, messaggio. Il cliente compila e invia. La richiesta arriva via email. Nessuna commissione, nessun intermediario.</p>
-        </div>
-      </div>
-      <div class="check-item reveal reveal-delay-5">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Statistiche animate</h4>
-          <p>Punteggio Google, recensioni, anno di apertura. I numeri partono da zero e contano fino al valore reale quando entrano nel campo visivo.</p>
-        </div>
-      </div>
-      <div class="check-item reveal">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Back to top e barra di lettura</h4>
-          <p>Un pulsante dorato riporta in cima. Una barra mostra il progresso. Dettagli che fanno la differenza nei siti lunghi come il menù.</p>
-        </div>
-      </div>
-      <div class="check-item reveal">
-        <div class="check"><i class="fas fa-check"></i></div>
-        <div>
-          <h4>Preloader personalizzato</h4>
-          <p>All'apertura, un caricamento con spinner e nome del ristorante. Il sito accoglie il visitatore già mentre carica.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TECNOLOGIA -->
-<section class="section section-alt" id="tecnologia">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">06 &mdash; Tecnologia</span>
-      <h2 class="section-title">Semplice, veloce, tuo</h2>
-      <p class="section-sub">Niente framework pesanti, niente database, niente canoni mensili.</p>
+      <span class="section-label">Chi siamo</span>
+      <h2 class="section-title">La storia del locale, raccontata bene</h2>
+      <p class="section-sub">Posizione, filosofia in cucina e numeri che danno fiducia a chi visita il sito per la prima volta.</p>
     </div>
     <div class="card-grid">
-      <div class="card reveal reveal-delay-1">
-        <div class="icon"><i class="fab fa-html5"></i></div>
-        <h3>HTML + CSS puri</h3>
-        <p>Zero framework, zero dipendenze. Un unico file CSS con variabili e calcoli responsive. Si legge, si modifica, si capisce.</p>
+      <div class="card reveal reveal-d1">
+        <div class="ico"><i class="fas fa-map-pin"></i></div>
+        <h3>Posizione</h3>
+        <p>Piazza Giovanni Corrias 2/A, Oristano — con mappa Google Maps integrata per arrivare senza cercare.</p>
       </div>
-      <div class="card reveal reveal-delay-2">
-        <div class="icon"><i class="fab fa-js"></i></div>
-        <h3>JavaScript vanilla</h3>
-        <p>Traduzioni, menu, galleria, animazioni, lightbox: tutto in un file JS. Niente jQuery, niente React. Leggero e veloce.</p>
+      <div class="card reveal reveal-d2">
+        <div class="ico"><i class="fas fa-star"></i></div>
+        <h3>Numeri che danno fiducia</h3>
+        <p>Rating, recensioni e anno di apertura in evidenza. I dati reali si inseriscono prima della pubblicazione.</p>
       </div>
-      <div class="card reveal reveal-delay-3">
-        <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
-        <h3>Performance</h3>
-        <p>Immagini con lazy loading, CSS minimizzato, nessun plugin che rallenta. Il sito si carica in pochi secondi ovunque.</p>
-      </div>
-      <div class="card reveal reveal-delay-4">
-        <div class="icon"><i class="fas fa-search"></i></div>
-        <h3>SEO</h3>
-        <p>Meta description, tag semantici, sitemap.xml. Il sito è pronto per essere trovato su Google quando qualcuno cerca "ristorante Oristano".</p>
-      </div>
-      <div class="card reveal reveal-delay-5">
-        <div class="icon"><i class="fas fa-share-alt"></i></div>
-        <h3>Social</h3>
-        <p>Instagram, Facebook, WhatsApp integrati. Il cliente ti trova con un click da qualsiasi pagina del sito.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><i class="fas fa-cloud"></i></div>
-        <h3>Hosting universale</h3>
-        <p>Sito statico: funziona su qualsiasi hosting (Vercel, Netlify, cPanel). Niente server, niente database, niente manutenzione tecnica.</p>
+      <div class="card reveal reveal-d3">
+        <div class="ico"><i class="fas fa-image"></i></div>
+        <h3>Foto del locale</h3>
+        <p>Box bianco con immagini reali del ristorante per mostrare l'atmosfera a chi non è mai entrato.</p>
       </div>
     </div>
+    <div class="showcase-card reveal reveal-d1" style="max-width:520px;margin:24px auto 0">
+      <div class="vis" style="height:auto;aspect-ratio:4/3">
+        <img src="img/pptx_about.jpg" alt="Ta Matete">
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.8rem;color:#999;margin-top:24px">I numeri (rating, recensioni, anno di apertura) sono segnaposto: li aggiorniamo con i dati reali prima della pubblicazione.</p>
   </div>
 </section>
 
-<!-- PERCHE SCEGLIERE MOCKLY -->
-<section class="section" id="perche-noi">
+<!-- SLIDE 7 - GALLERIA -->
+<section class="section section-alt" id="galleria">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">07 &mdash; Perché Mockly</span>
-      <h2 class="section-title">Lavoriamo come pensiamo si debba lavorare</h2>
-      <p class="section-sub">Niente vendite aggressive, niente template, niente sorprese. Solo progetti fatti bene.</p>
+      <span class="section-label">Galleria fotografica</span>
+      <h2 class="section-title">I piatti e l'atmosfera parlano da soli</h2>
+      <p class="section-sub">27 scatti reali del ristorante in un carosello scorrevole, per dare appetito prima ancora di sedersi al tavolo.</p>
+    </div>
+    <div class="showcase-card reveal reveal-d1" style="max-width:640px;margin:0 auto 32px">
+      <div class="vis" style="height:auto;aspect-ratio:16/9">
+        <img src="img/pptx_gallery.jpg" alt="Galleria Ta Matete">
+      </div>
     </div>
     <div class="card-grid">
-      <div class="card reveal reveal-delay-1">
-        <div class="icon"><i class="fas fa-ruler-combined"></i></div>
-        <h3>Misurato sul cliente</h3>
-        <p>Ogni scelta parte dal tuo brand e dalle tue esigenze. Colori, spazi, caratteri: niente è lasciato al caso, niente viene da un template.</p>
+      <div class="card reveal reveal-d1" style="text-align:center;padding:36px">
+        <div class="ico" style="margin:0 auto 16px"><i class="fas fa-images"></i></div>
+        <h3>27 foto in carosello</h3>
+        <p>Scatti reali del ristorante, dei piatti e dell'atmosfera. Il carosello scorre fluido, con lightbox a schermo intero per guardare ogni dettaglio.</p>
       </div>
-      <div class="card reveal reveal-delay-2">
-        <div class="icon"><i class="fas fa-code"></i></div>
-        <h3>Scritto a mano per te</h3>
-        <p>Niente WordPress, niente page builder, niente plugin. HTML, CSS e JavaScript scritti per questo progetto. Punto.</p>
+      <div class="card reveal reveal-d2" style="text-align:center;padding:36px">
+        <div class="ico" style="margin:0 auto 16px"><i class="fas fa-expand"></i></div>
+        <h3>Lightbox a schermo intero</h3>
+        <p>Clicca una foto e si apre a tutto schermo. Navigazione con frecce o swipe, perfetta per mostrare i piatti ai clienti indecisi.</p>
       </div>
-      <div class="card reveal reveal-delay-3">
-        <div class="icon"><i class="fas fa-comments"></i></div>
-        <h3>Parli con chi fa</h3>
-        <p>Un messaggio e risponde chi ha scritto il codice. Vuoi modificare un colore? Aggiungere un piatto? Sistemiamo senza burocrazia.</p>
-      </div>
-      <div class="card reveal reveal-delay-4">
-        <div class="icon"><i class="fas fa-language"></i></div>
-        <h3>Traduzioni fatte bene</h4>
-        <p>Ogni lingua è scritta a mano, in contesto. Il turista legge il menù in francese o spagnolo come lo leggeresti tu in italiano.</p>
-      </div>
-      <div class="card reveal reveal-delay-5">
-        <div class="icon"><i class="fas fa-sync-alt"></i></div>
-        <h3>Il sito è tuo, non sei solo</h3>
-        <p>Modifiche future, aggiornamenti del menù, nuove foto: siamo a disposizione per ogni necessità. Anche dopo la consegna.</p>
-      </div>
-      <div class="card reveal">
-        <div class="icon"><i class="fas fa-euro-sign"></i></div>
-        <h3>Prezzo trasparente</h3>
-        <p>Paghi una volta la realizzazione del sito. Poi un contributo annuale per il mantenimento (hosting, dominio, aggiornamenti). Niente sorprese, niente costi nascosti.</p>
-      </div>
-    </div>
-
-    <div class="process-row reveal">
-      <div class="process-step reveal reveal-delay-1">
-        <div class="step-num">1</div>
-        <h4>Analisi</h4>
-        <p>Capiamo il ristorante, gli obiettivi e il target</p>
-      </div>
-      <div class="process-step reveal reveal-delay-2">
-        <div class="step-num">2</div>
-        <h4>Progettazione</h4>
-        <p>Disegniamo layout e contenuti su misura</p>
-      </div>
-      <div class="process-step reveal reveal-delay-3">
-        <div class="step-num">3</div>
-        <h4>Sviluppo</h4>
-        <p>Scriviamo il codice e testiamo ogni pagina</p>
-      </div>
-      <div class="process-step reveal reveal-delay-4">
-        <div class="step-num">4</div>
-        <h4>Consegna</h4>
-        <p>Pubblichiamo il sito e lo consegnamo al cliente</p>
+      <div class="card reveal reveal-d3" style="text-align:center;padding:36px">
+        <div class="ico" style="margin:0 auto 16px"><i class="fas fa-sync-alt"></i></div>
+        <h3>Sempre aggiornabile</h3>
+        <p>Aggiungere nuove foto è semplice: le inseriamo noi ogni volta che vuoi, senza stravolgere il sito.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COSA CAMBIA -->
-<section class="section section-alt" id="utilita">
+<!-- SLIDE 8 - IL MENU -->
+<section class="section" id="menu">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-label">08 &mdash; Utilità quotidiana</span>
-      <h2 class="section-title">Cosa cambia dal giorno dopo</h2>
-      <p class="section-sub">Il sito non finisce quando esce. Lavora per il ristorante ogni giorno, anche quando sei in sala.</p>
+      <span class="section-label">Il Menù</span>
+      <h2 class="section-title">Un menù digitale facile da aggiornare</h2>
+      <p class="section-sub">Categorie a schede, prezzi sempre visibili e nota allergeni: niente PDF da scaricare, niente foto sgranate.</p>
+    </div>
+    <div class="showcase-grid">
+      <div class="showcase-card reveal reveal-d1" style="grid-column:1/-1;max-width:700px;margin:0 auto">
+        <div class="vis" style="height:auto;aspect-ratio:16/9">
+          <div class="shine"></div>
+          <img src="img/pptx_menu.png" alt="Menù Ta Matete">
+        </div>
+        <div class="body" style="text-align:center">
+          <span class="tag">tamatete.it/menu</span>
+          <p style="font-size:0.8rem;color:#999">11 categorie con tab switching, prezzi, descrizioni e toggle allergeni in 4 lingue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 9 - PRENOTAZIONI -->
+<section class="section section-alt" id="prenotazioni">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Prenotazioni</span>
+      <h2 class="section-title">Prenotare un tavolo non è mai stato così semplice</h2>
+      <p class="section-sub">Form di richiesta, telefono e WhatsApp diretto, indirizzo e orari sempre a portata di mano.</p>
+    </div>
+    <div class="showcase-grid">
+      <div class="showcase-card reveal reveal-d1" style="grid-column:1/-1;max-width:700px;margin:0 auto">
+        <div class="vis" style="height:auto;aspect-ratio:16/9">
+          <div class="shine"></div>
+          <img src="img/pptx_contatti.png" alt="Contatti Ta Matete">
+        </div>
+        <div class="body" style="text-align:center">
+          <span class="tag">tamatete.it/contatti</span>
+          <p style="font-size:0.8rem;color:#999">Due colonne: form prenotazione e card contatti con mappa. Telefono, email, WhatsApp, orari.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 10 - TURISTI & SMARTPHONE -->
+<section class="section" id="turisti">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Turisti &amp; Smartphone</span>
+      <h2 class="section-title">Pensato per chi visita Oristano da fuori</h2>
+      <p class="section-sub">La maggior parte delle prenotazioni turistiche arriva da telefono. Il sito è progettato mobile-first ed è disponibile in 4 lingue.</p>
+    </div>
+    <div class="lang-row reveal reveal-d1">
+      <div class="lang-item">
+        <div class="flag"><img src="img/pptx_flag_it.png" alt="IT" style="width:28px;height:28px"></div>
+        <div class="code">IT</div>
+        <div class="name">Italiano</div>
+      </div>
+      <div class="lang-item">
+        <div class="flag"><img src="img/pptx_flag_en.png" alt="EN" style="width:28px;height:28px"></div>
+        <div class="code">EN</div>
+        <div class="name">English</div>
+      </div>
+      <div class="lang-item">
+        <div class="flag"><img src="img/pptx_flag_fr.png" alt="FR" style="width:28px;height:28px"></div>
+        <div class="code">FR</div>
+        <div class="name">Français</div>
+      </div>
+      <div class="lang-item">
+        <div class="flag"><img src="img/pptx_flag_es.png" alt="ES" style="width:28px;height:28px"></div>
+        <div class="code">ES</div>
+        <div class="name">Español</div>
+      </div>
+    </div>
+    <div class="card-grid" style="margin-top:28px">
+      <div class="card reveal reveal-d2" style="text-align:center;padding:28px">
+        <div class="ico" style="margin:0 auto 14px"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Layout fluido</h3>
+        <p>Perfetto su ogni schermo, dal telefono al desktop. Il turista trova tutto subito, senza zoomare.</p>
+      </div>
+      <div class="card reveal reveal-d3" style="text-align:center;padding:28px">
+        <div class="ico" style="margin:0 auto 14px"><i class="fas fa-bolt"></i></div>
+        <h3>Caricamento rapido</h3>
+        <p>Ottimizzato anche con connessioni turistiche lente. Il sito si carica in pochi secondi ovunque.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 11 - IN SINTESI -->
+<section class="section section-alt" id="sintesi">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">In sintesi</span>
+      <h2 class="section-title">Tutto quello che serve, niente di superfluo</h2>
     </div>
     <div class="check-list">
-      <div class="check-item reveal reveal-delay-1">
+      <div class="check-item reveal reveal-d1">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Meno telefonate, più prenotazioni</h4>
-          <p>Il cliente trova orari e menù da solo. Quando chiama ha già deciso. Se preferisce, prenota dal form e la richiesta arriva via email.</p>
+          <h4>Sito multilingua</h4>
+          <p>Italiano, inglese, francese, spagnolo — con selettore istantaneo su ogni pagina.</p>
         </div>
       </div>
-      <div class="check-item reveal reveal-delay-2">
+      <div class="check-item reveal reveal-d2">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Più turisti al tavolo</h4>
-          <p>Oristano riceve visitatori tutto l'anno. Con 4 lingue il turista legge il menù nella sua lingua, capisce, sceglie, prenota.</p>
+          <h4>100% responsive</h4>
+          <p>Perfetto su telefono, tablet e desktop. Nessun elemento fuori posto su nessuno schermo.</p>
         </div>
       </div>
-      <div class="check-item reveal reveal-delay-3">
+      <div class="check-item reveal reveal-d3">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Il locale si vede prima di entrare</h4>
-          <p>27 foto raccontano l'atmosfera, i piatti, la sala. Il cliente si emoziona e arriva già convinto.</p>
+          <h4>Prenotazioni dirette</h4>
+          <p>Form, telefono e WhatsApp integrati. Ogni richiesta arriva via email senza intermediari.</p>
         </div>
       </div>
-      <div class="check-item reveal reveal-delay-4">
+      <div class="check-item reveal reveal-d4">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Il menù si aggiorna in minuti</h4>
-          <p>Cambi un piatto? Un prezzo? I dati sono in JavaScript. Si modifica senza toccare HTML e senza aspettare.</p>
+          <h4>Galleria fotografica</h4>
+          <p>27 foto reali in un carosello dedicato con lightbox a schermo intero.</p>
         </div>
       </div>
-      <div class="check-item reveal reveal-delay-5">
+      <div class="check-item reveal reveal-d5">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Su ogni schermo, sempre perfetto</h4>
-          <p>Il turista lo apre dal telefono, il locale dal PC, la famiglia dal tablet. Sempre bello, sempre leggibile.</p>
+          <h4>Menù interattivo</h4>
+          <p>Categorie, prezzi e allergeni sempre aggiornabili. Niente PDF, niente foto sgranate.</p>
         </div>
       </div>
       <div class="check-item reveal">
         <div class="check"><i class="fas fa-check"></i></div>
         <div>
-          <h4>Il biglietto da visita che non si piega</h4>
-          <p>Condividi il link su Instagram, Facebook, WhatsApp. Il sito è il tuo biglietto da visita digitale: sempre elegante, sempre aggiornato.</p>
+          <h4>Veloce e curato</h4>
+          <p>Tempi di caricamento minimi, design su misura per Ta Matete, nessun template prefabbricato.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINALE -->
-<section id="cta-final">
-  <div class="cta-orb"></div>
+<!-- SLIDE 2 - PROSSIMI PASSI -->
+<section class="section" id="passi">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Prossimi passi</span>
+      <h2 class="section-title">Cosa serve per andare online</h2>
+      <p class="section-sub">Quattro passaggi semplici separano la versione di anteprima dal sito definitivo e pubblicato.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal reveal-d1">
+        <div class="num">1</div>
+        <h4>Contenuti definitivi</h4>
+        <p>Foto facoltative aggiuntive, recensioni, anno di apertura e testi da confermare.</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="num">2</div>
+        <h4>Dominio ufficiale</h4>
+        <p>Registrazione e collegamento di un indirizzo come tamatete.it</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="num">3</div>
+        <h4>Social &amp; mappa</h4>
+        <p>Collegamento a Instagram, Facebook e Google Maps.</p>
+      </div>
+      <div class="step reveal reveal-d4">
+        <div class="num">4</div>
+        <h4>Pubblicazione</h4>
+        <p>Sito online, verificato su tutti i dispositivi e pronto alle prenotazioni.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3 - GRAZIE -->
+<section id="cta">
+  <div class="orb"></div>
   <div class="container" style="position:relative;z-index:1">
     <div class="reveal">
-      <h2 class="cta-title">Pronto a portare Ta Matete online?</h2>
-      <p class="cta-sub">Il sito è già live. Puoi vederlo subito, condividerlo con chi vuoi e iniziare a ricevere prenotazioni.</p>
-      <a href="index.html" class="cta-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Apri il sito di Ta Matete</a>
-      <div style="margin-top:24px;font-size:0.8rem;color:rgba(255,255,255,0.3)">
-        <span>Mockly &mdash; <a href="https://mockly.it" target="_blank" style="color:rgba(255,255,255,0.4);text-decoration:none">mockly.it</a></span>
+      <h2>Pronti a portare Ta Matete online</h2>
+      <p>Il sito è già live in versione di anteprima. Voi lo visionate, noi lo perfezioniamo insieme.</p>
+      <a href="index.html" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Vedi il sito di Ta Matete</a>
+      <div style="margin-top:20px;font-size:0.8rem;color:rgba(255,255,255,0.3)">
+        <span>Mockly &mdash; Web design per il territorio &mdash; <a href="https://mockly.it" target="_blank" style="color:rgba(255,255,255,0.4);text-decoration:none">mockly.it</a></span>
       </div>
     </div>
   </div>
 </section>
 
-<footer style="background:var(--dark);color:rgba(255,255,255,0.3);text-align:center;padding:48px 24px 36px;font-size:0.8rem">
-  <div style="max-width:1140px;margin:0 auto">
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;margin-bottom:32px">
-      <a href="index.html" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;transition:color 0.2s">Sito live</a>
-      <a href="menu.html" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;transition:color 0.2s">Menù</a>
-      <a href="contatti.html" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.85rem;transition:color 0.2s">Contatti</a>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;font-size:0.75rem;margin-bottom:24px">
-      <span>5 pagine</span>
-      <span style="color:rgba(255,255,255,0.15)">•</span>
-      <span>4 lingue</span>
-      <span style="color:rgba(255,255,255,0.15)">•</span>
-      <span>80+ piatti</span>
-      <span style="color:rgba(255,255,255,0.15)">•</span>
-      <span>27 foto</span>
-      <span style="color:rgba(255,255,255,0.15)">•</span>
-      <span>100% responsive</span>
-    </div>
-    <p style="color:rgba(255,255,255,0.2)">Ta Matete — Ristorante Bistrot | Piazza Giovanni Corrias 2/A, Oristano</p>
-    <p style="margin-top:12px">Progetto realizzato da <a href="https://mockly.it" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;font-weight:600">Mockly</a></p>
-  </div>
+<footer style="background:var(--dark);color:rgba(255,255,255,0.3);text-align:center;padding:36px 24px;font-size:0.75rem">
+  <p style="margin-bottom:4px">Ta Matete &mdash; Ristorante Bistrot | Piazza Giovanni Corrias 2/A, Oristano</p>
+  <p>Progetto realizzato da <a href="https://mockly.it" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;font-weight:600">Mockly</a></p>
 </footer>
 
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 <script>
-// navbar
 const navbar=document.getElementById('navbar');
 window.addEventListener('scroll',()=>{
   navbar.style.display=window.scrollY>window.innerHeight*0.6?'block':'none'
 });
-
-// scroll reveal
-const revealObserver=new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-},{threshold:0.12});
-
-document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
