@@ -14,6 +14,8 @@
 </head>
 <body data-page="home">
 
+  <div class="page-bg" aria-hidden="true"></div>
+
   <div class="preloader" id="preloader">
     <div class="preloader-content">
       <div class="preloader-ring"></div>
@@ -49,7 +51,6 @@
   </nav>
 
   <header class="hero" id="hero">
-    <div class="hero-bg"></div>
     <div class="hero-particles" id="heroParticles"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
@@ -76,12 +77,15 @@
   </header>
 
   <main>
+
     <section class="section section-alt reveal" id="about">
       <div class="container">
         <div class="about-grid">
           <div class="about-text">
-            <span class="section-tag" data-i18n="about.tag">La nostra storia</span>
-            <h2 class="section-title" data-i18n="about.title">Benvenuti da <span class="text-accent">Ta Matete</span></h2>
+            <div class="section-header">
+              <span class="section-tag" data-i18n="about.tag">La nostra storia</span>
+              <h2 class="section-title" data-i18n="about.title">Benvenuti da <span class="text-accent">Ta Matete</span></h2>
+            </div>
             <div class="about-body">
               <p data-i18n="about.p1">Ta Matete nasce nel cuore di Oristano, nell'elegante <strong>Piazza Giovanni Corrias</strong>, la stessa che ospita il Museo Antiquarium Arborense. Un luogo dove la tradizione culinaria sarda e mediterranea si fonde con influenze internazionali per offrire un'esperienza unica.</p>
               <p data-i18n="about.p2">A guidare il locale è <strong>Paolo</strong>, la cui passione per l'accoglienza e la cucina di qualità si riflette in ogni piatto e in ogni dettaglio del servizio. L'atmosfera raccolta della sala interna si alterna alla suggestione del cortile esterno e dei tavoli in piazza, illuminati la sera per una cena all'insegna della convivialità.</p>
@@ -111,13 +115,7 @@
       </div>
     </section>
 
-    <div class="section-divider" aria-hidden="true">
-      <span class="section-divider-line"></span>
-      <span class="section-divider-dot"></span>
-      <span class="section-divider-line"></span>
-    </div>
-
-    <section class="section-stats reveal" id="stats">
+    <section class="section-stats reveal reveal-scale" id="stats">
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
@@ -136,13 +134,7 @@
       </div>
     </section>
 
-    <div class="section-divider" aria-hidden="true">
-      <span class="section-divider-line"></span>
-      <span class="section-divider-dot"></span>
-      <span class="section-divider-line"></span>
-    </div>
-
-    <section class="section reveal" id="gallery">
+    <section class="section section-alt reveal" id="gallery">
       <div class="container">
         <div class="section-header">
           <span class="section-tag" data-i18n="gallery.tag">Galleria</span>

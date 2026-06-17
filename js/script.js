@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ----- READING PROGRESS -----
+  (function(){
+    const bar = document.createElement('div');
+    bar.className = 'progress-bar';
+    document.body.prepend(bar);
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+      bar.style.transform = 'scaleX(' + progress + ')';
+    }, { passive: true });
+  })();
+
   // ----- PRELOADER -----
   const preloader = document.getElementById('preloader');
   if (preloader) {
@@ -740,4 +753,5 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn?.addEventListener('click', () => goTo(currentPage + 1));
     window.addEventListener('resize', recalc);
   })();
+
 });
