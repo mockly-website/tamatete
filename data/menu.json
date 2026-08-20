@@ -1,0 +1,686 @@
+{
+    "categorie": [
+        {
+            "nome": "Antipasti di mare",
+            "piatti": [
+                {
+                    "nome": "Insalata di mare",
+                    "descrizione": "polpo, pomodorini, sedano, olivette taggiasche",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Zuppa di cozze e vongole in rosso",
+                    "descrizione": "",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Salmone fresco marinato agli agrumi",
+                    "descrizione": "",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Antipasti di terra",
+            "piatti": [
+                {
+                    "nome": "Tagliere grande di salumi e formaggi nostrani",
+                    "descrizione": "3/4 persone",
+                    "prezzo": "25,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tagliere piccolo di salumi e formaggi nostrani",
+                    "descrizione": "1/2 persone",
+                    "prezzo": "15,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Insalata caprese",
+                    "descrizione": "mozzarella di bufala, prosciutto crudo, pomodoro, basilico",
+                    "prezzo": "14,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Primi",
+            "piatti": [
+                {
+                    "nome": "Linguine con vongole e bottarga",
+                    "descrizione": "",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Fregola con ragù di stinco di vitello",
+                    "descrizione": "fondo bruno e maggiorana",
+                    "prezzo": "18,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ravioli artigianali ripieni al tartufo",
+                    "descrizione": "con ragù di cinghiale",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tagliolini al nero di seppia con ragù di seppia fresca",
+                    "descrizione": "",
+                    "prezzo": "18,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Secondi di carne",
+            "piatti": [
+                {
+                    "nome": "Porchetta arrosto con riduzione al mirto",
+                    "descrizione": "e patate al forno",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Gulash di Angus Irlandese",
+                    "descrizione": "",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tagliata di manzo e contorno",
+                    "descrizione": "",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Bistecca di manzo e contorno",
+                    "descrizione": "",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Hamburger \"Ta Matete\"",
+                    "descrizione": "misto manzo e maiale e contorno",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Straccetti di cavallo e contorno",
+                    "descrizione": "",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Secondi di pesce",
+            "piatti": [
+                {
+                    "nome": "Filetto di ombrina in salsa mediterranea",
+                    "descrizione": "",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Frittura di calamari",
+                    "descrizione": "",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Pesce spada alla griglia con olivette taggiasche",
+                    "descrizione": "sfumato alla vernaccia di Oristano e bieta al vapore",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Contorni",
+            "piatti": [
+                {
+                    "nome": "Patate al forno",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Patate fritte",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Verdure grigliate",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Insalata mista",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Insalata verde",
+                    "descrizione": "",
+                    "prezzo": "4,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Dessert",
+            "piatti": [
+                {
+                    "nome": "Dessert della casa",
+                    "descrizione": "",
+                    "prezzo": "6,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Menù Baby",
+            "piatti": [
+                {
+                    "nome": "Cotoletta di pollo e patatine fritte",
+                    "descrizione": "",
+                    "prezzo": "10,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Vini al calice",
+            "piatti": [
+                {
+                    "nome": "Grotta Rossa",
+                    "descrizione": "Rosso — (Carignano del Sulcis DOC) Cantina Santadi",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Cardanera",
+                    "descrizione": "Rosso — (Carignano del Sulcis DOC) Cantina Argiolas (Serdiana)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Carpante",
+                    "descrizione": "Rosso — (Cagnulari IGT) Carpante (Usini)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tiernu",
+                    "descrizione": "Rosso — (Bovale DOC) Cantina di Mogoro (Mogoro)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Karmis Cuvèe",
+                    "descrizione": "Bianco — (Vernaccia/Vermentino) Contini (Cabras)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tyrsos",
+                    "descrizione": "Bianco — (Vermentino DOC) Contini (Cabras)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Funtanaliras",
+                    "descrizione": "Bianco — (Vermentino di Gallura DOCG) Cantina Soc. Vermentino (Monti)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Istrale",
+                    "descrizione": "Bianco — (Vermentino DOC) Nuovi Poderi (Senorbì)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Terre Bianche",
+                    "descrizione": "Bianco — (Torbato DOC) Sella & Mosca (Alghero)",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Nieddera Rose",
+                    "descrizione": "Rosato — (Nieddera) Contini (Cabras)",
+                    "prezzo": "4,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Prosecco",
+                    "descrizione": "Bollicine — Valdobbiadene",
+                    "prezzo": "4,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Vini in bottiglia",
+            "piatti": [
+                {
+                    "nome": "Grotta Rossa",
+                    "descrizione": "Rosso — (Carignano del Sulcis DOC) Cantina Santadi",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Cardanera",
+                    "descrizione": "Rosso — (Carignano del Sulcis DOC) Argiolas (Serdiana)",
+                    "prezzo": "24,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Rocca Rubia",
+                    "descrizione": "Rosso — (Carignano del Sulcis Riserva 2021) Cantina Santadi (Santadi)",
+                    "prezzo": "35,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Sartiglia",
+                    "descrizione": "Rosso — (Cannonau di Sardegna) Cantina Contini (Cabras)",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "INU",
+                    "descrizione": "Rosso — (Cannonau) Contini (Cabras)",
+                    "prezzo": "26,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Carros",
+                    "descrizione": "Rosso — (Cannonau DOC) Flli.Puddu (Oliena)",
+                    "prezzo": "32,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Carpante",
+                    "descrizione": "Rosso — (Cagnulari IGT) Carpante (Usini)",
+                    "prezzo": "24,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tiernu",
+                    "descrizione": "Rosso — (Bovale DOC) Cantina di Mogoro (Mogoro)",
+                    "prezzo": "19,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Iselis",
+                    "descrizione": "Rosso — (Monica Doc Superiore) Argiolas (Serdiana)",
+                    "prezzo": "25,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Karmis Cuvèe",
+                    "descrizione": "Bianco — (Vernaccia/Vermentino) Contini (Cabras)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tyrsos",
+                    "descrizione": "Bianco — (Vermentino DOC) Contini (Cabras)",
+                    "prezzo": "18,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Nudo Rosè",
+                    "descrizione": "Rosato — (Cannonau) Cantine Siddura (Luogosanto)",
+                    "prezzo": "28,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Funtanaliras",
+                    "descrizione": "Bianco — (Vermentino di Gallura DOCG) Cantina Soc. Vermentino (Monti)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Istrale",
+                    "descrizione": "Bianco — (Vermentino DOC) Nuovi Poderi (Senorbì)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Akenta Cuvèe 71",
+                    "descrizione": "Bianco — (Vermentino DOC) Santa M. La Palma (Alghero)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Terre Bianche",
+                    "descrizione": "Bianco — (Torbato DOC) Sella & Mosca (Alghero)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Audarya",
+                    "descrizione": "Bianco — (Nuragus DOC) Audarya (Serdiana)",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "0789",
+                    "descrizione": "Bianco — (Vermentino di Gallura DOCG) Cantina Pedres (Olbia)",
+                    "prezzo": "20,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Gewurztraminer",
+                    "descrizione": "Bianco — (Gewurztraminer) Cantine Terlan (Terlano BZ)",
+                    "prezzo": "32,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Greco di tufo",
+                    "descrizione": "Bianco — (Alabastra)",
+                    "prezzo": "32,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Nieddera Rose",
+                    "descrizione": "Rosato — (Nieddera) Contini (Cabras)",
+                    "prezzo": "18,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Prosecco",
+                    "descrizione": "Bollicine — Valdobbiadene",
+                    "prezzo": "16,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ruggeri Prosecco Superiore",
+                    "descrizione": "Bollicine — (Prosecco) Cantine Ruggeri (Valdobbiadene)",
+                    "prezzo": "28,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ferghettina",
+                    "descrizione": "Bollicine — Franciacorta",
+                    "prezzo": "40,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Attilio Brut",
+                    "descrizione": "Bollicine — Contini (Cabras)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Attilio Brut Rosè",
+                    "descrizione": "Bollicine — Contini (Cabras)",
+                    "prezzo": "22,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Akenta",
+                    "descrizione": "Bollicine — Extra Dry Millesimato Santa M.La Palma (Alghero)",
+                    "prezzo": "25,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Akenta Rosè",
+                    "descrizione": "Bollicine — Rosè Millesimato Santa M. La Palma (Alghero)",
+                    "prezzo": "25,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Cocktails",
+            "piatti": [
+                {
+                    "nome": "Aperol Spritz",
+                    "descrizione": "Aperol – Prosecco – Seltz o acqua gas",
+                    "prezzo": "6,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Campari Spritz",
+                    "descrizione": "Campari Bitter – Prosecco – Seltz o acqua gas",
+                    "prezzo": "6,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Limoncello Spritz",
+                    "descrizione": "Limoncello – Prosecco – Seltz o acqua gas",
+                    "prezzo": "6,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ta Matete",
+                    "descrizione": "Vodka – succo d'ananas – basilico zenzero – Ginger Beer",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Americano",
+                    "descrizione": "Campari Bitter – Vermouth rosso – Seltz o acqua gas",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Negroni",
+                    "descrizione": "Campari Bitter – Vermouth rosso – Gin",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Negroni sbagliato",
+                    "descrizione": "Campari Bitter – Vermouth rosso – Prosecco",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Garibaldi",
+                    "descrizione": "Campari Bitter – succo d'arancia",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Mojito",
+                    "descrizione": "Rum bianco – lime – zucchero di canna – menta – Seltz o acqua gas o acqua tonica",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Caipirinha",
+                    "descrizione": "Cachaca – lime – zucchero di canna",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Caipiroska alla fragola",
+                    "descrizione": "Vodka – mix fragola – lime – zucchero di canna",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Margarita",
+                    "descrizione": "Tequila – Triple sec – succo di lime – sale",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Cocktails analcolici",
+            "piatti": [
+                {
+                    "nome": "Ta Matete Zero",
+                    "descrizione": "Succo d'ananas – zenzero – basilico – succo di lime – Ginger Ale",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Mojito Zero",
+                    "descrizione": "Succo di lime – limonata – menta – tonica",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Virgin Caipiroska fragola",
+                    "descrizione": "Fragole – lime – zucchero di canna – soda",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Gin Tonic",
+            "piatti": [
+                {
+                    "nome": "Bombay Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Tanqueray Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "7,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Grifu (Sardinian Gin) Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "8,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Gin Mare Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "8,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Bulldog Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "8,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Hendricks Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "8,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Monkey 47 Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "10,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Roku Gin Tonic",
+                    "descrizione": "",
+                    "prezzo": "8,00",
+                    "disponibile": true
+                }
+            ]
+        },
+        {
+            "nome": "Birre",
+            "piatti": [
+                {
+                    "nome": "Golden Ale 33 cl – Birrificio Puddu (Oristano)",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "IPA 33 cl – Birrificio Puddu (Oristano)",
+                    "descrizione": "",
+                    "prezzo": "5,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Corona 33 cl",
+                    "descrizione": "",
+                    "prezzo": "3,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Heineken 33 cl",
+                    "descrizione": "",
+                    "prezzo": "3,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ichnusa 33 cl",
+                    "descrizione": "",
+                    "prezzo": "3,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Moretti IPA 33 cl",
+                    "descrizione": "",
+                    "prezzo": "4,00",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Moretti Rossa 33 cl",
+                    "descrizione": "",
+                    "prezzo": "4,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Peroni senza glutine 33 cl",
+                    "descrizione": "",
+                    "prezzo": "3,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Moretti bionda alla spina 0,20 cl",
+                    "descrizione": "",
+                    "prezzo": "2,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Moretti bionda alla spina 0,30 cl",
+                    "descrizione": "",
+                    "prezzo": "3,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Moretti bionda alla spina 0,40 cl",
+                    "descrizione": "",
+                    "prezzo": "4,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ichnusa non filtrata alla spina 0,20 cl",
+                    "descrizione": "",
+                    "prezzo": "2,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ichnusa non filtrata alla spina 0,30 cl",
+                    "descrizione": "",
+                    "prezzo": "3,50",
+                    "disponibile": true
+                },
+                {
+                    "nome": "Ichnusa non filtrata alla spina 0,40 cl",
+                    "descrizione": "",
+                    "prezzo": "4,50",
+                    "disponibile": true
+                }
+            ]
+        }
+    ]
+}

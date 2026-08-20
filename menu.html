@@ -58,14 +58,7 @@
           <h2 class="section-title" data-i18n="menu.title">Scopri il <span class="text-accent">Menu</span></h2>
           <p class="section-desc" data-i18n="menu.desc">Tradizione sarda, freschezza del mare e un tocco di innovazione.</p>
         </div>
-        <div class="menu-tabs" id="menuTabs" role="tablist"></div>
-        <div class="menu-panels" id="menuPanels"></div>
-        <div class="menu-allergens" id="menuAllergens">
-          <span class="menu-allergens-toggle" id="allergensToggle">
-            <i class="fas fa-info-circle"></i> <span data-i18n="menu.allergens">Allergeni</span>
-          </span>
-          <div class="menu-allergens-content" id="allergensContent"></div>
-        </div>
+        <div id="menu-container" class="menu-dynamic" aria-live="polite"></div>
       </div>
     </section>
   </main>
@@ -119,6 +112,7 @@
     <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
 
+  <script src="/assets/menu-public.js" defer></script>
   <script src="js/script.js" defer></script>
 <div class="mockly-watermark"><div class="mockly-watermark-inner">MOCKLY<span class="mockly-watermark-sub">SITO IN SVILUPPO</span></div></div>
 </body>

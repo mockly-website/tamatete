@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------------
+# Protezione cartella data/
+# Impedisce il listing della cartella e l'accesso diretto ai file JSON
+# dal browser. I file restano comunque leggibili dagli script PHP
+# (server-side), che passano esclusivamente dalle API.
+# ---------------------------------------------------------------------
+
+# 1) Niente elenco file
+Options -Indexes
+
+# 2) Blocca l'accesso diretto a tutti i file JSON
+<FilesMatch "\.(json)$">
+    <IfModule mod_authz_core.c>
+        # Apache 2.4+
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        # Apache 2.2 (compatibilità hosting condivisi più vecchi)
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3) Blocca anche l'accesso diretto a eventuali file di backup/php in questa cartella
+<FilesMatch "\.(php|bak|old|log)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

@@ -123,6 +123,26 @@ document.addEventListener('DOMContentLoaded', () => {
     'gin-tonic': { it:'Gin Tonic', en:'Gin Tonic', fr:'Gin Tonic', es:'Gin Tonic' }
   };
 
+  // Nomi delle categorie del menu dinamico (quello salvato nell'editor)
+  // tradotti nelle 4 lingue del sito. Le chiavi devono coincidere con i
+  // nomi delle categorie in data/menu.json.
+  const menuDynamicCatNames = {
+    'Antipasti di mare': { it:'Antipasti di mare', en:'Seafood Starters', fr:'Entrées de mer', es:'Entrantes de mar' },
+    'Antipasti di terra': { it:'Antipasti di terra', en:'Land Starters', fr:'Entrées de terre', es:'Entrantes de tierra' },
+    'Primi': { it:'Primi', en:'First Courses', fr:'Premiers plats', es:'Primeros platos' },
+    'Secondi di carne': { it:'Secondi di carne', en:'Meat Mains', fr:'Plats de viande', es:'Platos de carne' },
+    'Secondi di pesce': { it:'Secondi di pesce', en:'Fish Mains', fr:'Plats de poisson', es:'Platos de pescado' },
+    'Contorni': { it:'Contorni', en:'Side Dishes', fr:'Accompagnements', es:'Acompañamientos' },
+    'Dessert': { it:'Dessert', en:'Desserts', fr:'Desserts', es:'Postres' },
+    'Menù Baby': { it:'Menù Baby', en:'Baby Menu', fr:'Menu Enfant', es:'Menú Infantil' },
+    'Vini al calice': { it:'Vini al calice', en:'Wines by the Glass', fr:'Vins au verre', es:'Vinos al vaso' },
+    'Vini in bottiglia': { it:'Vini in bottiglia', en:'Wines (Bottle)', fr:'Vins (bouteille)', es:'Vinos (botella)' },
+    'Cocktails': { it:'Cocktails', en:'Cocktails', fr:'Cocktails', es:'Cócteles' },
+    'Cocktails analcolici': { it:'Cocktails analcolici', en:'Non-alcoholic Cocktails', fr:'Cocktails sans alcool', es:'Cócteles sin alcohol' },
+    'Gin Tonic': { it:'Gin Tonic', en:'Gin Tonic', fr:'Gin Tonic', es:'Gin Tonic' },
+    'Birre': { it:'Birre', en:'Beers', fr:'Bières', es:'Cervezas' }
+  };
+
   const menuItems = [
     { cat:'antipasti-mare', price:'€16,00', aller:'(14-9)', name:{ it:'Insalata di mare', en:'Seafood Salad', fr:'Salade de fruits de mer', es:'Ensalada de mariscos' }, desc:{ it:'polpo, pomodorini, sedano, olivette taggiasche', en:'octopus, cherry tomatoes, celery, Taggiasca olives', fr:'poulpe, tomates cerises, céleri, olives de Taggiasca', es:'pulpo, tomates cherry, apio, aceitunas taggiasche' } },
     { cat:'antipasti-mare', price:'€16,00', aller:'(14)', name:{ it:'Zuppa di cozze e vongole in rosso', en:'Mussel and Clam Soup in Tomato Sauce', fr:'Soupe de moules et palourdes à la tomate', es:'Sopa de mejillones y almejas en salsa roja' }, desc:{ it:'', en:'', fr:'', es:'' } },
@@ -459,10 +479,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (lang === currentLang) return;
       langBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      if (document.getElementById('menuTabs')) {
+      currentLang = lang;
+      const widget = window.__menuWidget;
+      if (widget && typeof widget.setLang === 'function') {
+        // Menu dinamico attivo (menu.html): cambia lingua al volo.
+        widget.setLang(lang);
+      } else if (document.getElementById('menuTabs')) {
         renderMenu(lang);
       } else {
-        currentLang = lang;
         translateStatic(lang);
       }
     });
@@ -475,9 +499,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =====================================================
-  //  MENU INIT (only on menu.html)
+  //  MENU INIT (menu.html only)
   // =====================================================
-  if (document.getElementById('menuTabs')) {
+  // Se la pagina usa il menu dinamico (admin/editor), inizializza il
+  // widget di menu-public.js appena il DOM è pronto (dopo che tutti i
+  // <script defer> sono stati eseguiti).
+  function initDynamicMenu() {
+    if (!window.initMenu || !document.getElementById('menu-container')) return;
+    window.__menuWidget = window.initMenu('#menu-container', {
+      lang: currentLang,
+      categories: menuDynamicCatNames,
+      accentColor: '#9c922c',
+      errorMessage: 'Menu momentaneamente non disponibile. Riprova più tardi.'
+    });
+  }
+  if (document.getElementById('menu-container')) {
+    if (window.initMenu) {
+      initDynamicMenu();
+    } else {
+      window.addEventListener('DOMContentLoaded', initDynamicMenu);
+    }
+  } else if (document.getElementById('menuTabs')) {
     renderMenu('it');
   }
 
