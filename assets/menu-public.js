@@ -1,10 +1,10 @@
 /**
  * menu-public.js — Menu dinamico di Ta Matete (versione integrata nel sito)
  *
- * Carica il menu dall'API /api/get-menu.php e lo disegna con lo stesso
- * stile del sito (tabs per categoria + pannelli). I piatti segnati come
- * "non disponibile" vengono nascosti automaticamente. In caso di errore
- * mostra un messaggio discreto senza rompere la pagina.
+ * Carica il menu da Supabase (lo stesso database del Mockly Portal) e lo
+ * disegna con lo stesso stile del sito (tabs per categoria + pannelli).
+ * I piatti segnati come "non disponibile" vengono nascosti automaticamente.
+ * In caso di errore mostra un messaggio discreto senza rompere la pagina.
  *
  * Utilizzo:
  *   <div id="menu-container"></div>
@@ -20,13 +20,18 @@
  *       onReady: function (menu) { ... }
  *     });
  *     widget.setLang('en');   // cambia lingua a runtime
- *     widget.refresh();       // ricarica i dati dall'API
+ *     widget.refresh();       // ricarica i dati da Supabase
  *   </script>
  */
 (function () {
   'use strict';
 
   var FETCH_TIMEOUT = 10000;
+
+  // Dati del progetto Supabase (pubblici, usati anche dal Mockly Portal).
+  var SUPABASE_URL = 'https://xwrauwiogtyzlvyriazb.supabase.co';
+  var SUPABASE_KEY = 'sb_publishable_tAX5e1kpUrYJ_z2HvbYt0g_fHgiTBNK';
+  var CLIENT_SLUG = 'Tamatete';
 
   // -----------------------------------------------------------------
   //  Utils
@@ -69,7 +74,6 @@
     }
 
     var state = {
-      apiUrl: options.apiUrl || '/api/get-menu.php',
       lang: options.lang || 'it',
       categories: options.categories || {},   // mappa nome-categoria -> {it,en,fr,es}
       showUnavailable: !!options.showUnavailable,
@@ -106,8 +110,53 @@
     }
 
     // -----------------------------------------------------------------
-    //  Fetch dei dati
+    //  Fetch dei dati (da Supabase, stessa origine del Mockly Portal)
     // -----------------------------------------------------------------
+    // Cerca il client tramite slug, poi carica categorie e piatti
+    // (ordinati come nel portale) e li converte nella struttura
+    // { "categorie": [ { "nome": ..., "piatti": [...] } ] }.
+    function loadFromSupabase() {
+      var headers = { apikey: SUPABASE_KEY };
+      return fetch(SUPABASE_URL + '/rest/v1/clients?select=id&slug=eq.' + CLIENT_SLUG + '&limit=1', { headers: headers })
+        .then(function (response) {
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          return response.json();
+        })
+        .then(function (rows) {
+          if (!rows || rows.length === 0) throw new Error('Locale non trovato');
+          var clientId = rows[0].id;
+          return fetch(
+            SUPABASE_URL + '/rest/v1/menu_categories' +
+              '?select=id,name,order_index,menu_items(id,name,description,price,is_available,order_index)' +
+              '&client_id=eq.' + clientId +
+              '&order=order_index.asc' +
+              '&menu_items.order=order_index.asc',
+            { headers: headers, cache: 'no-store' }
+          );
+        })
+        .then(function (response) {
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          return response.json();
+        })
+        .then(function (categories) {
+          return {
+            categorie: categories.map(function (cat) {
+              return {
+                nome: cat.name,
+                piatti: (cat.menu_items || []).map(function (item) {
+                  return {
+                    nome: item.name,
+                    descrizione: item.description || '',
+                    prezzo: item.price != null ? String(item.price) : '',
+                    disponibile: item.is_available !== false
+                  };
+                })
+              };
+            })
+          };
+        });
+    }
+
     function fetchData() {
       container.innerHTML = '';
       var loading = el('div', 'menu-loading', 'Caricamento menu…');
@@ -118,11 +167,7 @@
         if (controller) controller.abort();
       }, FETCH_TIMEOUT);
 
-      fetch(state.apiUrl, { cache: 'no-store', signal: controller ? controller.signal : undefined })
-        .then(function (response) {
-          if (!response.ok) throw new Error('HTTP ' + response.status);
-          return response.json();
-        })
+      loadFromSupabase(controller ? controller.signal : undefined)
         .then(function (data) {
           clearTimeout(timer);
           if (!data || !Array.isArray(data.categorie)) throw new Error('Struttura dati non valida');
