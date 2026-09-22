@@ -1,5 +1,5 @@
 /**
- * menu-public.js — Menu dinamico di Ta Matete (versione integrata nel sito)
+ * menu-public.js — Menu dinamico di Bistrot L'Incontro (versione integrata nel sito)
  *
  * Carica il menu da Supabase (lo stesso database del Mockly Portal) e lo
  * disegna con lo stesso stile del sito (tabs per categoria + pannelli).
@@ -31,7 +31,7 @@
   // Dati del progetto Supabase (pubblici, usati anche dal Mockly Portal).
   var SUPABASE_URL = 'https://xwrauwiogtyzlvyriazb.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_tAX5e1kpUrYJ_z2HvbYt0g_fHgiTBNK';
-  var CLIENT_SLUG = 'Tamatete';
+  var CLIENT_SLUG = 'Lincontro';
 
   // -----------------------------------------------------------------
   //  Utils

@@ -1,5 +1,5 @@
 /* =============================================
-   TA MATETE — Ristorante Bistrot | Style Sheet
+   BISTROT L'INCONTRO — Ristorante Bistrot | Style Sheet
    ============================================= */
 
 /* ----- ANIMATIONS ----- */
@@ -24,7 +24,7 @@
 
 /* ----- CUSTOM PROPERTIES ----- */
 :root{
-  /* Colors — Ta Matete palette */
+  /* Colors — Bistrot L'Incontro palette */
   --clr-accent:#9c922c;
   --clr-accent-light:#b8ad3e;
   --clr-accent-dark:#7e7420;
@@ -779,7 +779,7 @@ main .menu-subcat-header{border-bottom-color:rgba(156,146,44,0.4)}
   to{opacity:1;transform:translateY(0) scale(1)}
 }
 
-/* Menu grid style — original Ta Matete look */
+/* Menu grid style — original look */
 .menu-items{
   max-width:800px;
   margin:0 auto

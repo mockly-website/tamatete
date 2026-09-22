@@ -1,6 +1,6 @@
-# Ta Matete – Ristorante Bistrot
+# Bistrot L'Incontro – Ristorante Bistrot
 
-Sito web multilingue per **Ta Matete – Ristorante Bistrot** (Oristano, Piazza Giovanni Corrias 2/A).
+Sito web multilingue per **Bistrot L'Incontro – Ristorante Bistrot** (Oristano, Corso Umberto I 50).
 
 ## Tecnologie
 
@@ -21,7 +21,7 @@ Sito web multilingue per **Ta Matete – Ristorante Bistrot** (Oristano, Piazza 
 
 ## Come funziona il menu
 
-- Il menu vive su **Supabase** (tabelle `menu_categories` e `menu_items`, filtrate dal client `Ta matete`).
+- Il menu vive su **Supabase** (tabelle `menu_categories` e `menu_items`, filtrate dal client `Bistrot L'Incontro`).
 - Il titolare lo modifica dal **Mockly Portal**: le modifiche sono subito visibili sul sito, senza deploy.
 - `assets/menu-public.js` scarica i dati da Supabase (endpoint REST pubblico, con chiave anon) e li disegna nello stile del sito: tabs per categoria, piatti esauriti nascosti, 4 lingue (IT/EN/FR/ES) via `js/script.js`.
 
